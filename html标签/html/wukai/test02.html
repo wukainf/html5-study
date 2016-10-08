@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .bigbox {
+      width: 1080px;
+      height: 190px;
+      margin: 300px auto;
+    }
+
+    li {
+      width: 154px;
+      height: 190px;
+      float: left;
+      position: relative;
+    }
+
+    li:nth-child(1) {
+      background: #00bbff;
+    }
+
+    li:nth-child(1) .sun {
+      width: 73px;
+      height: 73px;
+      position: absolute;
+      background: #ffee44;
+      border-radius: 37px;
+      top: 45px;
+      left: 40px;
+    }
+
+    li:nth-child(1) .sun2 {
+      width: 73px;
+      height: 73px;
+      margin: -6.5px 0 0 -6.5px;
+      background: #ffee44;
+      border-radius: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      animation: guang 1s linear infinite;
+    }
+
+    .shu {
+      width: 122px;
+      height: 19px;
+      background: white;
+      transform: skew(4deg);
+      background: linear-gradient(90deg,rgba(255, 255, 255,0),rgba(255, 255, 255, 0.5),rgba(0, 0, 0, 0));
+      position: absolute;
+    }
+
+    .shu1 {
+      top: 74px;
+      left: 13px;
+      transform: rotate(-4deg);
+    }
+
+    .shu2 {
+      top: 74px;
+      left: 16px;
+      transform: rotate(-94deg);
+    }
+
+    @keyframes guang {
+      0% {
+        padding: 0px;
+        border-radius: 37px;
+      }
+      50% {
+        border-radius: 50px;
+        padding: 8.5px;
+      }
+      100% {
+        border-radius: 37px;
+        padding: 0px;
+      }
+    }
+
+    li:nth-child(2) {
+      background: #2eb5e5;
+    }
+
+    .yun1 {
+      width: 154px;
+      height: 190px;
+    }
+
+    .r1 {
+      /*animation: yun1 1s linear infinite;*/
+
+    }
+
+    @keyframes yun1 {
+      from {
+        width: 100%;
+        height: 100%;
+      }
+      to {
+        width: 120%;
+        height: 120%;
+      }
+    }
+    .r1 {
+      background: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 14px;
+      position: absolute;
+      top: 28px;
+      left: 50px;
+    }
+
+    .r2 {
+      background: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 13px;
+      position: absolute;
+      top: 38px;
+      left: 36px;
+    }
+
+    .r3 {
+      background: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 13px;
+      position: absolute;
+      top: 48px;
+      left: 50px;
+    }
+    .r4 {
+      background: white;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      position: absolute;
+      top: 38px;
+      left: 70px;
+    }
+    .r5 {
+      background: white;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      position: absolute;
+      top: 53px;
+      left: 70px;
+    }
+    .r6 {
+      background: white;
+      width: 18px;
+      height: 18px;
+      border-radius: 9px;
+      position: absolute;
+      top: 50px;
+      left: 78px;
+    }
+    .r7 {
+      width: 60px;
+      height: 14px;
+      background: #2cacd9;
+      position: absolute;
+      border-radius: 30px/7px;
+      top: 100px;
+      left: 35px;
+    }
+
+    li:nth-child(3) {
+      background: #e6e6e6;
+    }
+
+
+    .yun2 div {
+      background: #ccc;
+    }
+
+    .yudian {
+      width: 110px;
+      height: 65px;
+      overflow: hidden;
+      position: absolute;
+      top: 50px;
+      left: 30px;
+    }
+
+    span {
+      display: inline-block;
+      width: 2px;
+      height: 4px;
+      background: #a8a8a8;
+      position: absolute;
+      top: -20px;
+      border-radius: 1px/2px;
+      animation: yudian 1s linear infinite;
+    }
+
+    span:nth-child(2) {
+      left: 4px;
+      animation-delay: 0.3s;
+    }
+    span:nth-child(3) {
+      left: 9px;
+      animation-delay: 0.5s;
+    }
+    span:nth-child(4) {
+      left: 20px;
+      animation-delay: 0.3s;
+    }
+    span:nth-child(5) {
+      left: 25px;
+      animation-delay: 0.2s;
+    }
+    span:nth-child(6) {
+      left: 32px;
+      animation-delay: 0.7s;
+    }
+    span:nth-child(7) {
+      left: 40px;
+      animation-delay: 0.6s;
+    }
+    span:nth-child(8) {
+      left: 50px;
+      animation-delay: 0.3s;
+    }
+    span:nth-child(9) {
+      left: 59px;
+      animation-delay: 0.1s;
+    }
+    span:nth-child(10) {
+      left: 70px;
+      animation-delay: 0.9s;
+    }
+
+    @keyframes yudian {
+      from {
+        top: -20px;
+      }
+      to {
+        top: 90px;
+      }
+    }
+
+    li:nth-child(4) {
+      background: #f3d166;
+    }
+
+    li:nth-child(4) .r7 {
+      background: #e7c661;
+    }
+
+    li:nth-child(4) .hong {
+      width: 80px;
+      height: 80px;
+      background-size: 80px 80px;
+      border-radius: 40px;
+      position: absolute;
+      top: 38px;
+      left: 28px;
+      background: radial-gradient(40px at 40px 40px,transparent,transparent 65%,#fb323c 65%,#fb323c 70%,#f99716 70%,#f99716 75%,
+        #fee124 75%,#fee124 80%,#afdf2e 80%,#afdf2e 85%,#68d2f7 85%,#68d2f7 90%,#60b1f5 90%,#60b1f5 95%,#b05c92 95%,#b05c92);
+    }
+
+    .hong .gaizhu {
+      position: absolute;
+      border-top: 40px solid transparent;
+      border-left: 40px solid #f3d166;
+      border-right: 40px solid #f3d166;
+      border-bottom: 40px solid #f3d166;
+    }
+
+    li:nth-child(5) {
+      background: #222233;
+      overflow: hidden;
+    }
+
+    li:nth-child(5) .moon {
+      width: 89px;
+      height: 89px;
+      position: absolute;
+      top: 38px;
+      left: 40px;
+      background: white;
+      border-radius: 50px;
+    }
+
+    li:nth-child(5) .yuanx {
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      top: 28px;
+      left: 67px;
+      background: #222233;
+      border-radius: 55px;
+    }
+
+    li:nth-child(5) .xingxing {
+      width: 3px;
+      height: 3px;
+      background: white;
+      position: absolute;
+    }
+
+    .xingxing:nth-child(1) {
+      opacity: 0.3;
+      top: 59px;
+      left: 39px;
+    }
+  </style>
+  <body>
+
+    <div class="bigbox">
+      <ul>
+        <li>
+          <div class="shu1 shu">
+          </div>
+          <div class="shu2 shu">
+          </div>
+          <div class="sun">
+            <div class="sun2">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="yun1">
+            <div class="r1">
+            </div>
+            <div class="r2">
+            </div>
+            <div class="r3">
+            </div>
+            <div class="r4">
+            </div>
+            <div class="r5">
+            </div>
+            <div class="r6">
+            </div>
+            <div class="r7">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="yun2">
+            <div class="r1">
+            </div>
+            <div class="r2">
+            </div>
+            <div class="r3">
+            </div>
+            <div class="r4">
+            </div>
+            <div class="r5">
+            </div>
+            <div class="r6">
+            </div>
+            <div class="r7">
+            </div>
+          </div>
+          <div class="yudian">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </li>
+        <li>
+          <div class="hong">
+            <div class="gaizhu">
+
+            </div>
+          </div>
+          <div class="r7">
+
+          </div>
+        </li>
+        <li>
+          <div class="moon">
+          </div>
+          <div class="yuanx">
+          </div>
+          <div class="xingxing x1">
+          </div>
+          <div class="xingxing x2">
+          </div>
+          <div class="xingxing x3">
+          </div>
+          <div class="xingxing x4">
+          </div>
+          <div class="xingxing x5">
+          </div>
+          <div class="xingxing x6">
+          </div>
+        </li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>火箭</title>
+    <style media="screen">
+      body {
+        background: blue;
+        position: relative;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 600px;
+        left: 200px;
+        margin: 600px 0 0 0;
+        transition: all 1s linear;
+      }
+
+      *:hover img {
+        transform: rotate(45deg) translateY(-1000px);
+      }
+    </style>
+  </head>
+  <body>
+
+    <img src="./image/rocket.png" alt="" />
+
+  </body>
+</html>

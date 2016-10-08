@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>定位</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /*position:relative相对定位,相对之前自身的位置*/
+      .box {
+        width: 200px;
+        height: 200px;
+        background: aqua;
+        position: relative;
+        top: 50px;
+        left: 50px;
+      }
+
+
+      /*position:absolute绝对定位,相对于设置过绝对或相对定位的祖先元素的位置*/
+      .box1 {
+        width:  100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+        top: 100px;
+      }
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background: green;
+        position: relative;
+        /*top: 100px;*/
+      }
+
+      .langbox {
+        height: 2000px;
+      }
+
+      /*position:fixed固定,相对于屏幕固定*/
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background: orange;
+        position: fixed;
+        top: 100px;
+        left: 100px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="box1">
+
+      </div>
+      <div class="box2">
+
+      </div>
+    </div>
+
+    <div class="box3">
+
+    </div>
+
+    <div class="langbox">
+
+    </div>
+
+  </body>
+</html>

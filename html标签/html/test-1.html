@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小火车</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #ff7a4e;
+      }
+
+      .box {
+        width: 600px;
+        height: 260px;
+        margin: 300px auto;
+      }
+
+      .back {
+        width: 100px;
+        height: 250px;
+        background: #e66644;
+        border-radius: 9px 9px 50px 50px;
+        box-shadow: 0 -4px #cc5f3e,0 4px #ff896e;
+        float: left;
+        margin-left: 10px;
+        position: relative;
+      }
+
+      .top {
+        width: 100px;
+        height: 52px;
+        line-height: 52px;
+        background: #555;
+        box-shadow: 0 4px #444,0 -4px #777;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 900;
+        color: #444;
+        z-index: 5;
+        position: absolute;
+        text-shadow: -1px -1px 1px black,0px 1px 1px white;
+      }
+
+      .bang {
+        width: 20px;
+        min-height: 114px;
+        position: absolute;
+        background: #3d3d3d;
+        border-radius: 10px;
+        top: 50px;
+        left: 40px;
+        animation: dong 1s linear infinite;
+        z-index: 1;
+      }
+
+      .bing {
+        width: 20px;
+        height: 88px;
+        background: #4d4d4d;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .lianjie {
+        width: 16px;
+        height: 16px;
+        background: #d7d7d7;
+        border-radius: 8px;
+        position: absolute;
+        left: 2px;
+        bottom: 2px;
+      }
+
+      .bottom {
+        width: 60px;
+        height: 60px;
+        border: 20px solid #cf593d;
+        border-radius: 80px;
+        /*position: absolute;*/
+        margin-top: 149px;
+      }
+
+      .bang2 {
+        animation-delay: 0.4s;
+      }
+      .bang3 {
+        animation-delay: 0.6s;
+      }
+      .bang4 {
+        animation-delay: 0.8s;
+      }
+      .bang5 {
+        animation-delay: 1s;
+      }
+
+      @keyframes dong {
+        0% {
+          height: 114px;
+          transform: rotate(0deg);
+          transform-origin: top right;
+        }
+        25% {
+          height: 160px;
+          transform: rotate(-16deg);
+          transform-origin: top right;
+        }
+        50% {
+          height: 200px;
+          transform: rotate(0deg);
+          transform-origin: top right;
+        }
+        75% {
+          height: 154px;
+          transform: rotate(19deg);
+          transform-origin: top right;
+      }
+      100% {
+        height: 114px;
+        transform: rotate(0deg);
+        transform-origin: top right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="back">
+        <div class="top">
+          R
+        </div>
+        <div class="bang bang1">
+          <div class="bing">
+          </div>
+          <div class="lianjie">
+          </div>
+        </div>
+        <div class="bottom">
+        </div>
+      </div>
+      <div class="back">
+        <div class="top">
+          O
+        </div>
+        <div class="bang bang2">
+          <div class="bing">
+          </div>
+          <div class="lianjie">
+          </div>
+        </div>
+        <div class="bottom">
+        </div>
+      </div>
+      <div class="back">
+        <div class="top">
+          B
+        </div>
+        <div class="bang bang3">
+          <div class="bing">
+          </div>
+          <div class="lianjie">
+          </div>
+        </div>
+        <div class="bottom">
+        </div>
+      </div>
+      <div class="back">
+        <div class="top">
+          O
+        </div>
+        <div class="bang bang4">
+          <div class="bing">
+          </div>
+          <div class="lianjie">
+          </div>
+        </div>
+        <div class="bottom">
+        </div>
+      </div>
+      <div class="back">
+        <div class="top">
+          T
+        </div>
+        <div class="bang bang5">
+          <div class="bing">
+          </div>
+          <div class="lianjie">
+          </div>
+        </div>
+        <div class="bottom">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

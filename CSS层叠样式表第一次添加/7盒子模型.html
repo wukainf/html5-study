@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盒子模型</title>
+    <style media="screen">
+
+       /*右击你想检查的元素，选择检查，能查看从该元素发散的所有盒子的盒子模型*/
+      .box {
+        /*给元素设置宽高，注意！：行内元素不能直接设置宽高需通过display: block;转化为块级元素
+          或通过display: inline-block;转化为行内块级元素才能进行宽高设置*/
+        width: 200px;
+        height: 200px;
+        /*给盒子设置内边距，类似于填充物，四个值分别为上右下左的内边距会使盒子变大*/
+        padding: 100px 100px 100px 100px;
+
+        /*单独设置则在其后加个方向，这是将下内边距设为0px*/
+        padding-bottom: 0px;
+
+        background: green;
+        /*给所有的边框设为1px宽度*/
+        border-width: 1px;
+        /*给所有的边框设为实线 dashed:虚线 dotted：点 */
+        border-style: solid;
+        /*给所有的边框设置颜色为蓝色*/
+        border-color: blue;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 200px;
+        /*综合设置分别为：border-width,border-style,border-color*/
+        border: 1px dashed red;
+
+        /*想单独设置则在border后加上方向，top：上，right：右，bottom：下，left：左*/
+        /*none表示边框设置为无*/
+        border-bottom: none;
+        /*给盒子设置外边距，不影响盒子的大小，四个值顺序与padding顺序一致为上右下左*/
+        margin: 100px 100px 100px 100px;
+      }
+
+
+      /*下面两个盒子为父子盒子关系，但自盒子设置的上边距失效了，这就是上外边距合并,解决的方法
+      一般有三种：1.给父盒子设置边框，2.给父盒子设置内边距，3.给父盒子设置overflow：hidden*/
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background: orange;
+        margin-top: 100px;
+        /*border-top: 1px solid gray;*/
+        /*padding-top: 50px;*/
+        /*overflow: hidden;*/
+      }
+
+      .box4 {
+        width: 50px;
+        height: 50px;
+        background: green;
+        margin-top: 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+
+    </div>
+    <div class="box2">
+
+    </div>
+
+    <div class="box3">
+      <div class="box4">
+
+      </div>
+    </div>
+  </body>
+</html>

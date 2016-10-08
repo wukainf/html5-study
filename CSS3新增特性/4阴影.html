@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>阴影</title>
+  </head>
+  <style media="screen">
+
+    .box {
+      width: 500px;
+      height: 500px;
+      line-height: 500px;
+      font-size: 100px;
+      font-weight: 900;
+      color: gray;
+      background-color: gray;
+    }
+
+    /*text-shadow是文本阴影属性,多被用来设置凹凸字*/
+    .box:nth-child(1) {
+      text-shadow: -2px -2px 2px white,2px 2px 2px black;
+    }
+
+    .box:nth-child(2) {
+      text-shadow: 2px 2px 2px white,-2px -2px 2px black;
+    }
+
+    /*box-shadow是盒子阴影属性,不仅可以用来设置阴影,还可以制作盒子*/
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background: orange;
+      position: absolute;
+      right: 500px;
+      top: 100px;
+      /*border-radius用来设置圆角*/
+      border-radius: 100px;
+      box-shadow: 5px 5px black,300px 0 aqua;
+    }
+
+    .box3 {
+      width: 200px;
+      height: 200px;
+      background: orange;
+      position: absolute;
+      right: 500px;
+      top: 400px;
+      border: 50px solid gray;
+      /*边框图片,切成九宫格,四个角和四个边通过平铺组成边框的背景图*/
+      /*border-image: url("./2.png") 25 25 25 25 stretch;*/
+      /*border-image: url("./2.png") 25 25 25 25 repeat;*/
+      border-image: url("./2.png") 25 25 25 25 round;
+    }
+
+
+  </style>
+  <body>
+
+    <div class="box">
+      凸字
+    </div>
+
+    <div class="box">
+      凹字
+    </div>
+
+    <div class="box2">
+      盒子
+    </div>
+
+    <div class="box3">
+
+    </div>
+
+  </body>
+</html>

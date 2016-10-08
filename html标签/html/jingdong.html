@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><img src="/>./jd/favicon.ico"></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0
+      }
+
+      a {
+        text-decoration: none;
+        color: #666666;
+        height: 12px;
+      }
+
+      li,dl,dt {
+        list-style: none;
+      }
+
+      .head {
+        background: #f1f1f1;
+        height: 30px;
+      }
+
+      .head div{
+        font: 300 12px "黑体";
+        color: #666666;
+        height: 12px;
+        line-height: 12px;
+      }
+
+      .head .lingxing {
+        position: absolute;
+        height: 6px;
+        right:0;
+        top:0;
+        font-size: 12px;
+        line-height: 0px;
+        overflow: hidden;
+        margin-right: 5px;
+        margin-top: 13px;
+        /*margin: auto 0;*/
+      }
+
+      .song:hover .lingxing {
+        line-height: 12px;
+      }
+
+      .head li:hover .lingxing {
+        line-height: 12px;
+      }
+
+      .song:hover {
+        background: white;
+      }
+
+      .head a:hover {
+        color: red;
+      }
+
+      .head .song {
+        /*float: left;*/
+        height: 30px;
+        line-height: 30px;
+        margin-left: 80px;
+        width: 100px;
+        text-indent: 8px;
+        cursor: pointer;
+        position: relative;
+        float: left;
+      }
+
+      /*.head .song:hover*/
+      .head .log {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 320px;
+      }
+
+      .head li {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        list-style: none;
+        float: left;
+        position: relative;
+        width: 68px;
+        /*border-left: 1px solid gray;*/
+      }
+
+      .head .li2,.li3,.li4,.li5,.li6 {
+        padding-right: 12px;
+      }
+
+      .head .li1 a {
+        color: red;
+      }
+
+      .head .li3 {
+        background: url("./jd/tel.png") no-repeat 10px center;
+        text-indent: 5px;
+        padding-left: 10px;
+      }
+
+      .hengtiaotupian {
+        line-height: 80px;
+        height: 80px;
+        background: #ff3569;
+        text-align: center;
+      }
+
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+      .banxin1 {
+        width: 1210px;
+        margin: 24px auto;
+      }
+
+      .banxin1 .jdlogo,input,button,.gouwuche {
+        float: left;
+      }
+
+      .banxin1 .ceng1 {
+        height: 90px;
+      }
+
+      .banxin1 .jdlogo {
+        padding-bottom: 30px;
+      }
+
+      .banxin1 input,button {
+        width: 447px;
+        height: 29px;
+        border: 3px solid #b61d1d;
+        margin-left: 98px;
+        padding-left: 10px;
+        outline-style: none;
+      }
+
+      .banxin1 button {
+        color: white;
+        background: #b61d1d;
+        height: 35px;
+        width: 81px;
+        outline-style: none;
+        margin-left: 0;
+        cursor: pointer;
+      }
+
+      .banxin1 .gouwuche {
+        width: 117px;
+        height: 27px;
+        background: #f9f9f9;
+        border: 1px solid #dfdfdf;
+        margin-left: 104px;
+        padding: 13px 11px 0;
+        position: relative;
+        /*float: right;*/
+      }
+
+      .banxin1 .gouwuche .mod {
+        width: 17px;
+        height: 16px;
+        background: url("./jd/tel-1.png") no-repeat 0 -56px;
+        overflow: hidden;
+        float: left;
+      }
+
+      .banxin1 .gouwuche .wenzi {
+        font: 300 12px "黑体";
+        color: #666666;
+        float: left;
+        margin-left: 8px;
+      }
+
+      .banxin1 .gouwuche .biaoshi {
+        color: #999999;
+        float: right;
+      }
+
+      .banxin1 .gouwuche img {
+        position: relative;
+        top: -10px;
+      }
+
+      .banxin1 .ul1 {
+        float: left;
+        margin-left: 90px;
+      }
+
+      .banxin1 .ul1 li {
+        height: 30px;
+        float: left;
+        margin-left: 12px;
+        font: 300 12px "宋体";
+      }
+
+      .banxin1 .ul1 li:hover a {
+        color: #c81623;
+      }
+
+      .banxin1 .ul1 .list1 a {
+        color: red;
+      }
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+      .xian {
+        height: 2px;
+        background: #b1191a;
+      }
+
+      .banxin2 {
+        width: 1210px;
+        margin: 0 auto;
+      }
+
+      .banxin2 .level2 {
+        height: 45px;
+      }
+
+      .banxin2 .fenleitou {
+        width: 210px;
+        height: 45px;
+        text-indent: 12px;
+        background: #b1191a;
+        font: 300 18px "黑体";
+        line-height: 45px;
+        color: white;
+        float: left;
+      }
+
+      .banxin2 .ul2 li {
+        padding:  15px;
+        font: 300 15px "黑体";
+        height: 15px;
+        float: left;
+      }
+
+      .banxin2 .ul2  li:hover a {
+        color: #c31624;
+      }
+
+      .banxin3 {
+        width: 1210px;
+        height: 480px;
+        margin: 0 auto;
+      }
+
+      .banxin3 .ul3{
+        float: left;
+        background: #c81623;
+        padding: 1px 0 1px 1px;
+      }
+
+      .banxin3 .ul3 li {
+        width: 185px;
+        height: 31px;
+        padding: 0 12px;
+        line-height: 31px;
+        text-indent: 10px;
+        background: #c81623;
+        position: relative;
+      }
+
+      .banxin3 .ul3  li:hover {
+        background: white;
+      }
+
+      .banxin3 .ul3  li:hover a {
+        color: #c81623;
+      }
+
+      .banxin3 .ul3  li:hover span {
+        color: #c81623;
+      }
+
+      .banxin3 .ul3 a {
+        font: 300 12px "黑体";
+        color: white;
+      }
+
+      .banxin3 .ul3 li span {
+        font-size: 15px;
+        color: white;
+        float: right;
+      }
+
+      .banxin3 .ul3 li span:hover {
+        text-transform: 90deg;
+      }
+
+      .banxin3 .block2 {
+        margin: 10px;
+        float: left;
+      }
+
+      .banxin3 .block3 {
+        width: 248px;
+        height: 372px;
+        border: 1px solid #e4e4e4;
+        float: right;
+        margin-top: 10px;
+      }
+
+      .banxin3 .block3 dt{
+        height: 15px;
+        padding: 10px 15px 7px;
+        border-bottom: 1px dashed #e4e4e4;
+        font: 500 15px "黑体";
+        color: #666;
+        line-height: 15px;
+      }
+
+      .banxin3 .block3 dt span {
+        font: 300 13px "黑体";
+        float: right;
+        margin-top: -5px;
+      }
+
+      .banxin3 .block3 dt span a:hover {
+        color: red;
+      }
+
+      .banxin3 .block3 dd {
+        height: 12px;
+        padding: 6px 0 5px 0;
+        margin-left: 15px;
+      }
+
+      .banxin3 .block3 .dl1 dd a{
+        display: block;
+        height: 12px;
+        line-height: 12px;
+        font: 300 12px "黑体";
+      }
+
+      .banxin3 .block3 .dl1 dd a:hover span{
+        color: red;
+      }
+
+      .banxin3 .block3 .dl1 dd a:hover{
+        color: red;
+      }
+
+      .banxin3 .block3 dd a span {
+        font-weight: 900;
+      }
+
+      .banxin3 .block4 {
+        margin-top: 5px;
+        float: right;
+      }
+
+      .banxin3 .block3 table {
+        border-top: 1px solid #e4e4e4;
+        margin-top: 11px
+      }
+
+      .banxin3 .block3 table td {
+        width: 62px;
+        height: 70px;
+        /*position: relative;*/
+        text-align: center;
+        border-right: 1px solid #e4e4e4;
+        border-bottom: 1px solid #e4e4e4;
+      }
+
+      .banxin3 .block3 .tubiao4 {
+        border-right:none;
+      }
+      .banxin3 .block3 .tubiao8 {
+        border-right:none;
+      }
+      .banxin3 .block3 .tubiao12 {
+        border-right:none;
+      }
+
+      .banxin3 .block3 table td div {
+        width: 24.5px;
+        height: 24.2px;
+        /*position: absolute;*/
+        background: url("./jd/service.png") no-repeat;
+        margin: auto auto 0;
+        margin-bottom: 6px;
+      }
+
+      .banxin3 .block3 td span {
+        font: 400 12px "黑体";
+        margin: auto auto 4px;
+      }
+
+      .banxin3 .block3 .tubiao1 div{
+        background-position: -3px 0;
+      }
+      .banxin3 .block3 .tubiao2 div{
+        background-position: -1px -27px;
+      }
+      .banxin3 .block3 .tubiao3 div{
+        background-position: 0 -52px;
+      }
+      .banxin3 .block3 .tubiao4 div{
+        background-position: 0 -75px;
+      }
+      .banxin3 .block3 .tubiao5 div{
+        background-position: -1.5px -102px;
+      }
+      .banxin3 .block3 .tubiao6 div{
+        background-position: -1px -126px;
+      }
+      .banxin3 .block3 .tubiao7 div{
+        background-position: -1px -151px;
+      }
+      .banxin3 .block3 .tubiao8 div{
+        background-position: -4px -176px;
+      }
+      .banxin3 .block3 .tubiao9 div{
+        background-position: -24.8px -200.5px;
+      }
+      .banxin3 .block3 .tubiao10 div{
+        background-position: -4px -227px;
+      }
+      .banxin3 .block3 .tubiao11 div{
+        background-position: -1px -252px;
+      }
+      .banxin3 .block3 .tubiao12 div{
+        background-position: 0 -274px;
+      }
+
+      .banxin3 .block3 td:hover span,td {
+        cursor: pointer;
+        color: red;
+      }
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+      .hengtiao {
+        height: 54px;
+        padding: 20px 0;
+        background: #f5f5f5;
+        position: relative;
+      }
+
+      .hengtiao img {
+        position: absolute;
+      }
+
+      .hengtiao .img3 {
+        left: 50%;
+        margin-left: 41px;
+      }
+
+      .hengtiao .img2 {
+        left: 50%;
+        margin-left: -302px;
+      }
+
+      .hengtiao .img1 {
+        left: 50%;
+        margin-left: -605px;
+      }
+
+      .hengtiao .img4 {
+        left: 50%;
+        margin-left: 344px;
+      }
+
+      .banxin4 a:hover {
+        color: red;
+      }
+
+      .banxin4 {
+        width: 1210px;
+        height: 202px;
+        margin: 17px auto;
+      }
+
+      .banxin4 dl {
+        float: left;
+        margin-right: 120px;
+      }
+
+      .banxin4 dl dt {
+        height: 15px;
+        padding: 10px 0;
+        font: 500 15px "黑体";
+        color: #666666;
+      }
+
+      .banxin4 dl dd {
+        height: 20px;
+        font: 300 12px "黑体";
+        color: #666666;
+      }
+
+      .banxin4 dd a {
+        height: 12px;
+      }
+      .banxin4 .dl06 {
+        margin-right: 0;
+        width: 203px;
+        height: 169px;
+        background: url("./jd/map.png") no-repeat left bottom;
+      }
+
+      #dd6 {
+        margin-top: 8px;
+        margin-left: 130px;
+        width: 58px;
+      }
+
+      a:hover #dd6 {
+        color: red;
+      }
+
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+      .banxin5 ul li a:hover {
+        color: red;
+      }
+
+      .banxin5 {
+        width: 1210px;
+        height: 120px;
+        margin: 0 auto;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .banxin5 .ulfin {
+        height: 18px;
+        margin: 8px 0 5px 0;
+      }
+
+      .banxin5 ul li,li div {
+        float: left;
+        font: 300 12px "黑体";
+        color: #666;
+      }
+
+      .banxin5 ul li div {
+        width: 1px;
+        height: 12px;
+        background: #a366a3;
+        margin: 4px 12px 0;
+      }
+
+      .banxin5 .li001 {
+        margin-left: 210px;
+      }
+
+      .banxin5 .ulfin2 {
+        /*padding-leftd: 20px;*/
+        height: 20px;
+        /*margin-bottom: 5px;*/
+      }
+
+      .banxin5 img {
+        float: left;
+        /*margin: 30px 0 0 400px;*/
+      }
+
+      .banxin5 .ulfin3 .li002 {
+        margin-left: 250px;
+      }
+
+      .banxin5 .li003 {
+        margin-left: 240px;
+      }
+
+      .banxin5 .li004 {
+        margin-left: 540px;
+      }
+
+
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+      .gezhongtu {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .gezhongtu img {
+        margin-left: 13px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="song">
+        送至：北京&nbsp;&nbsp;
+        <div class="lingxing">
+            ◇
+        </div>
+      </div>
+      <div class="log">
+        你好，请登陆
+      </div>
+      <div class="biaodan">
+        <ul>
+          <li class="li1"><a href="#">免费注册</a></li>
+          <li><a href="#">我的订单</a></li>
+          <li class="li2">
+            <a href="#">我的京东</a>
+            <div class="lingxing">
+              ◇
+            </div>
+          </li>
+          <li><a href="#">京东会员</a></li>
+          <li><a href="#">企业采购</a></li>
+          <li class="li3">
+            <a href="#">手机京东</a>
+            <div class="lingxing">
+              ◇
+            </div>
+          </li>
+          <li class="li4">
+            <a href="#">关注京东</a>
+            <div class="lingxing">
+              ◇
+            </div>
+          </li>
+          <li class="li5">
+            <a href="#">客户服务</a>
+            <div class="lingxing">
+              ◇
+            </div>
+          </li>
+          <li class="li6">
+            <a href="#">网站导航</a>
+            <div class="lingxing">
+              ◇
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hengtiaotupian">
+      <img src="./jd/hengtiao2.png" alt="" />
+    </div>
+
+    <div class="banxin1">
+      <div class="ceng1">
+        <div class="jdlogo">
+          <img src="./jd/jd-logo.png" alt="" />
+        </div>
+        <input type="text">
+        <button type="button" name="button">搜索</button>
+        <div class="gouwuche">
+          <div class="mod">
+          </div>
+          <div class="wenzi">
+            我的购物车
+          </div>
+          <div class="biaoshi">
+            >
+          </div>
+          <img src="./jd/jingdong_r4_c12.png" alt="" />
+        </div>
+        <ul class="ul1">
+          <li class="list1"><a href="#">99元3件</a></li>
+          <li><a href="#">领免息劵</a></li>
+          <li><a href="#">1元抢粽</a></li>
+          <li><a href="#">荣耀v8</a></li>
+          <li><a href="#">决胜618</a></li>
+          <li><a href="#">蚊帐</a></li>
+          <li><a href="#">运动短裤</a></li>
+          <li><a href="#">免费试用</a></li>
+          <li><a href="#">实木沙发</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="banxin2">
+      <div class="level2">
+        <div class="fenleitou">
+          全部商品分类
+        </div>
+        <ul class="ul2">
+          <li><a href="#">服装城</a></li>
+          <li><a href="#">美妆馆</a></li>
+          <li><a href="#">超市</a></li>
+          <li><a href="#">全球购</a></li>
+          <li><a href="#">闪购</a></li>
+          <li><a href="#">团购</a></li>
+          <li><a href="#">拍卖</a></li>
+          <li><a href="#">金融</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="xian">
+    </div>
+
+    <div class="banxin3">
+      <div class="block1">
+        <ul class="ul3">
+          <li><a href="#">家用电器</a><span>&gt;</span></li>
+          <li><a href="#">手机、数码、京东通信</a><span>&gt;</span></li>
+          <li><a href="#">电脑、办公</a><span>&gt;</span></li>
+          <li><a href="#">家居、家具、家装、厨具</a><span>&gt;</span></li>
+          <li><a href="#">男装、女装、童装、内衣</a><span>&gt;</span></li>
+          <li><a href="#">个户化妆、清洁用品、宠物</a><span>&gt;</span></li>
+          <li><a href="#">鞋靴、箱包、珠宝、奢侈品</a><span>&gt;</span></li>
+          <li><a href="#">运动户外、钟表</a><span>&gt;</span></li>
+          <li><a href="#">汽车、汽车用品</a><span>&gt;</span></li>
+          <li><a href="#">母婴、玩具乐器</a><span>&gt;</span></li>
+          <li><a href="#">食品、酒类、生鲜、特产</a><span>&gt;</span></li>
+          <li><a href="#">医药保健</a><span>&gt;</span></li>
+          <li><a href="#">图书、音像、电子书</a><span>&gt;</span></li>
+          <li><a href="#">彩票、旅行、充值、票务</a><span>&gt;</span></li>
+          <li><a href="#">理财、众筹、白条、保险</a><span>&gt;</span></li>
+        </ul>
+      </div>
+      <div class="block2">
+        <img src="./jd/main-img.jpg" alt="" />
+      </div>
+      <div class="block3">
+        <dl class="dl1">
+          <dt>京东快报<span><a href="#">更多&nbsp;&gt;</a></span></dt>
+          <dd><a href="#"><span>[特惠]</span>空调品牌大战72小时！</a></dd>
+          <dd><a href="#"><span>[公告]</span>CES开幕体验智能京东智慧生活</a></dd>
+          <dd><a href="#"><span>[特惠]</span>潮配99元3件，单反低至1699！</a></dd>
+          <dd><a href="#"><span>[公告]</span>大连柳州开仓&nbsp;211限时达扩大</a></dd>
+          <dd><a href="#"><span>[特惠]</span>美酒嘉年华&nbsp;进口红酒1元购</a></dd>
+        </dl>
+        <table cellspacing="0">
+          <tr>
+            <td class="tubiao1"><a href="#"><div></div><span>话费</span></a></td>
+            <td class="tubiao2"><a href="#"><div></div><span>机票</span></a></td>
+            <td class="tubiao3"><a href="#"><div></div><span>电影票</span></a></td>
+            <td class="tubiao4"><a href="#"><div></div><span>游戏</span></a></td>
+          </tr>
+          <tr>
+            <td class="tubiao5"><a href="#"><div></div><span>彩票</span></a></td>
+            <td class="tubiao6"><a href="#"><div></div><span>团购</span></a></td>
+            <td class="tubiao7"><a href="#"><div></div><span>酒店</span></a></td>
+            <td class="tubiao8"><a href="#"><div></div><span>火车票</span></a></td>
+          </tr>
+          <tr>
+            <td class="tubiao9"><a href="#"><div></div><span>众筹</span></a></td>
+            <td class="tubiao10"><a href="#"><div></div><span>理财</span></a></td>
+            <td class="tubiao11"><a href="#"><div></div><span>礼品卡</span></a></td>
+            <td class="tubiao12"><a href="#"><div></div><span>白条</span></a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="block4">
+        <img src="./jd/xiaotupian.png" alt="" />
+      </div>
+    </div>
+
+    <div class="hengtiao">
+      <img class="img1" src="./jd/service_items_1.png" alt="" />
+      <img class="img2" src="./jd/service_items_2.png" alt="" />
+      <img class="img3" src="./jd/service_items_3.png" alt="" />
+      <img class="img4" src="./jd/service_items_4.png" alt="" />
+    </div>
+
+    <div class="banxin4">
+      <dl class="dl01">
+        <dt>购物指南</dt>
+        <dd><a href="#">购物流程</a></dd>
+        <dd><a href="#">会员介绍</a></dd>
+        <dd><a href="#">生活旅行/团购</a></dd>
+        <dd><a href="#">常见问题</a></dd>
+        <dd><a href="#">大家电</a></dd>
+        <dd><a href="#">联系客服</a></dd>
+      </dl>
+      <dl class="dl02">
+        <dt>配送方式</dt>
+        <dd><a href="#">上门自提</a></dd>
+        <dd><a href="#">211限时达</a></dd>
+        <dd><a href="#">配送服务查询</a></dd>
+        <dd><a href="#">配送费收取标准</a></dd>
+        <dd><a href="#">海外配送</a></dd>
+      </dl>
+      <dl class="dl03">
+        <dt>支付方式</dt>
+        <dd><a href="#">货到付款</a></dd>
+        <dd><a href="#">在线支付</a></dd>
+        <dd><a href="#">分期付款</a></dd>
+        <dd><a href="#">邮局汇款</a></dd>
+        <dd><a href="#">公司转账</a></dd>
+      </dl>
+      <dl class="dl04">
+        <dt>售后服务</dt>
+        <dd><a href="#">售后政策</a></dd>
+        <dd><a href="#">价格保护</a></dd>
+        <dd><a href="#">退款说明</a></dd>
+        <dd><a href="#">返修/退换货</a></dd>
+        <dd><a href="#">取消订单</a></dd>
+      </dl>
+      <dl class="dl05">
+        <dt>特色服务</dt>
+        <dd><a href="#">夺宝岛</a></dd>
+        <dd><a href="#">DIY装机</a></dd>
+        <dd><a href="#">延保服务</a></dd>
+        <dd><a href="#">京东E卡</a></dd>
+        <dd><a href="#">京东通信</a></dd>
+        <dd><a href="#">京东JD+</a></dd>
+      </dl>
+      <dl class="dl06">
+        <dt>京东自营覆盖区县</dt>
+        <dd>京东已向全国2603个区县提供自营</dd>
+        <dd>配送服务，支持货到付款、POS机</dd>
+        <dd>刷卡和售后上门服务。</dd>
+        <dd id="dd6"><a href="#">查看详情</a><span>&gt;</span></dd>
+      </dl>
+
+    </div>
+
+    <div class="banxin5">
+      <ul class="ulfin">
+        <li class="li001"><a href="#">关于我们</a></li>
+        <li><div></div></li>
+        <li><a href="#">联系我们</a></li>
+        <li><div></div></li>
+        <li><a href="#">商家入驻</a></li>
+        <li><div></div></li>
+        <li><a href="#">营销中心</a></li>
+        <li><div></div></li>
+        <li><a href="#">手机京东</a></li>
+        <li><div></div></li>
+        <li><a href="#">友情链接</a></li>
+        <li><div></div></li>
+        <li><a href="#">销售联盟</a></li>
+        <li><div></div></li>
+        <li><a href="#">京东社区</a></li>
+        <li><div></div></li>
+        <li><a href="#">京东公益</a></li>
+        <li><div></div></li>
+        <li><a href="#">English Site</a></li>
+        <li><div></div></li>
+        <li><a href="#">Contact US</a></li>
+      </ul>
+      <img  class="li001" src="./jd/link-icon.png" alt="" />
+      <ul class="ulfin2">
+        <li><a href="#">京公网安备&nbsp;11000002000088号</a></li>
+        <li><div></div></li>
+        <li><a href="#">京ICP证070359号</a></li>
+        <li><div></div></li>
+        <li><a href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a></li>
+        <li><div></div></li>
+        <li><a href="#">新出发京零&nbsp;字第大120007号</a></li>
+      </ul>
+      <ul class="ulfin3">
+        <li class="li002"><a href="#">音像制品经营许可证苏宿批005号</a></li>
+        <li><div></div></li>
+        <li><a href="#">出版物经营许可证编号新出发(苏)批字第N-012号</a></li>
+        <li><div></div></li>
+        <li><a href="#">互联网出版许可证编号新出网证(京)字150号</a></li>
+      </ul>
+      <ul>
+        <li class="li003">网络文化经营许可证京网文[2014]2148-348号&nbsp;违法合不良行为信息举报电话:4006561155&nbsp;Copyright&copy;2004-2016&nbsp;京东JD.com版权所有</li>
+      </ul>
+      <ul>
+        <li class="li004">京东旗下网站:京东钱包</li>
+      </ul>
+    </div>
+    <div class="gezhongtu">
+      <img class="gezhongtu1" src="./jd/auth-1.png" alt="" />
+      <img src="./jd/auth-2.png" alt="" />
+      <img src="./jd/auth-3.jpg" alt="" />
+      <img src="./jd/auth-4.png" alt="" />
+      <img src="./jd/auth-5.jpg" alt="" />
+      <img src="./jd/auth-6.jpg" alt="" />
+    </div>
+  </body>
+</html>

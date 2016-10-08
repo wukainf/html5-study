@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>属性选择器</title>
+  </head>
+  <style media="screen">
+
+    /*含有class属性名的元素*/
+    a[class] {
+      display: block;
+      width: 150px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      background: aqua;
+      text-decoration: none;
+      color: black;
+    }
+
+    /*href属性为"#"的元素*/
+    a[href="#"] {
+      color: red;
+    }
+
+    /*href属性中*/
+    a[href *="baidu"] {
+      width: 150px;
+      height: 40px;
+      display: block;
+      line-height: 40px;
+      margin-top: 20px;
+      background: orange;
+      color: purple;
+      text-align: center;
+      text-decoration: none;
+    }
+
+  </style>
+  <body>
+
+    <a href="#" class="a1">包含class的a标签</a>
+    <a href="http://www.baidu.com">百度一下</a>
+    <p>
+
+    </p>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .div1 {
+        width: 100px;
+        height: 100px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1" id="div1">
+      hello<br/>
+      hi
+      nihao
+    </div>
+    <script type="text/javascript">
+      d = document.getElementById("div1");
+      d.addEventListener("click",function(e){
+        console.log(e.target);
+        console.log(this);
+      },true);
+      document.body.addEventListener("click",function(e){
+        console.log(e.target);
+        console.log(this);
+      },true);
+      console.log(d.childNodes);
+      console.log(d.getAttribute(""));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var a = 1;
+      console.log(--a);
+      --a;
+      console.log(a);
+
+      b = 3;
+      c = null;
+      d = +c;
+      console.log(d);
+      e = {
+        valueOf: function() {
+          return -2;
+        }
+      }
+      f = {
+        valueOf: function() {
+        return 2;
+        }
+      }
+      g = +f;
+      console.log(2 == true);
+      console.log(+e);
+      console.log(g);
+
+      // for (;;) {
+      //   console.log('he');
+      //   console.log('llo');
+      // }
+    </script>
+
+  </body>
+</html>

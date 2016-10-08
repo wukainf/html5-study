@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>日历</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+        text-align: center;
+      }
+
+      .box {
+        width: 385px;
+        height: 324px;
+        margin: 51px 0 0 80px;
+        background: url("./calender.jpg") no-repeat;
+        padding: 38px 142px 8px 12px;
+      }
+
+      .box ul li {
+        float: left;
+        width: 51px;
+        height: 51px;
+        padding: 2px;
+        border-top: 1px solid #eeeeee;
+      }
+
+      .box ul li:not([class="hello"]):hover {
+        background: orange;
+      }
+
+      .box ul li[class="hello"] {
+        height: 44px;
+        font: 600 14px "黑体";
+        line-height: 44px;
+        border-top: none;
+      }
+
+      .box ul li[class="hello"]  {
+
+      }
+
+      .box li span,i {
+        background: white;
+        width: 51px;
+        float: left;
+      }
+
+      .box li i {
+        font-style: none;
+        font: 500 11px "黑体";
+        height: 31px;
+        line-height: 31px;
+      }
+
+      .box li span {
+        font: 300 12px "黑体";
+        color: #919191;
+        height: 20px;
+        line-height: 12px;
+      }
+
+      .box li:nth-child(7n),li:nth-child(7n+6) {
+        color: red;
+      }
+
+      .box li:nth-child(8),li:nth-child(40),li:nth-child(41),li:nth-child(42) i {
+        color: #bfc2dd;
+      }
+
+      .box li:nth-child(9) {
+        background: orange;
+      }
+
+      .box li:nth-child(9) span {
+        background: none;
+        color: white;
+      }
+
+      .box li:nth-child(9) i {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li class="hello">一</li>
+        <li class="hello">二</li>
+        <li class="hello">三</li>
+        <li class="hello">四</li>
+        <li class="hello">五</li>
+        <li class="hello">六</li>
+        <li class="hello">七</li>
+        <li><i>30</i><span>十九</span></li>
+        <li><i>1</i><span>艾滋病日</span></li>
+        <li><i>2</i><span>廿一</span></li>
+        <li><i>3</i><span>廿二</span></li>
+        <li><i>4</i><span>廿三</span></li>
+        <li><i>5</i><span>廿四</span></li>
+        <li><i>6</i><span>廿五</span></li>
+        <li><i>7</i><span>廿六</span></li>
+        <li><i>8</i><span>廿七</span></li>
+        <li><i>9</i><span>廿八</span></li>
+        <li><i>10</i><span>廿九</span></li>
+        <li><i>11</i><span>初一</span></li>
+        <li><i>12</i><span>初二</span></li>
+        <li><i>13</i><span>初三</span></li>
+        <li><i>14</i><span>初四</span></li>
+        <li><i>15</i><span>初五</span></li>
+        <li><i>16</i><span>初六</span></li>
+        <li><i>17</i><span>初七</span></li>
+        <li><i>18</i><span>初八</span></li>
+        <li><i>19</i><span>初九</span></li>
+        <li><i>20</i><span>初十</span></li>
+        <li><i>21</i><span>十一</span></li>
+        <li><i>22</i><span>十二</span></li>
+        <li><i>23</i><span>十三</span></li>
+        <li><i>24</i><span>十四</span></li>
+        <li><i>25</i><span>十五</span></li>
+        <li><i>26</i><span>十六</span></li>
+        <li><i>27</i><span>十七</span></li>
+        <li><i>28</i><span>十八</span></li>
+        <li><i>29</i><span>十九</span></li>
+        <li><i>30</i><span>二十</span></li>
+        <li><i>31</i><span>廿一</span></li>
+        <li><i>1</i><span>元旦</span></li>
+        <li><i>2</i><span>廿三</span></li>
+        <li><i>3</i><span>廿四</span></li>
+      </ul>
+    </div>
+  </body>
+</html>

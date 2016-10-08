@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360 5</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #0da5d6;
+        overflow: hidden;
+      }
+
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+      }
+
+      .clearfix {
+        zoom: 1;
+      }
+
+      .top {
+        width: 1077px;
+        height: 134px;
+        background: url("./image/360/info_5.png") no-repeat;
+        margin: 20px auto;
+      }
+
+      .center {
+        width: 1004px;
+        height: 472px;
+        margin: auto;
+        position: relative;
+      }
+
+      .topnav {
+        width: 1004px;
+        height: 79px;
+        background: url("./image/360/toolbar.png") no-repeat;
+      }
+
+      .bottomnav {
+        width: 394px;
+        height: 29px;
+        background: url("./image/360/extra.png") no-repeat;
+        float: right;
+        margin-top: 364px;
+      }
+
+      .lay {
+        width: 1006px;
+        height: 1px;
+        background: white;
+      }
+
+      .lay1 {
+        position: absolute;
+        margin-left: -1243px;
+        animation: lay1 1.5s linear 1 forwards;
+      }
+
+      @keyframes lay1 {
+        from {
+          margin-left: -1243px;
+        }
+        to {
+          margin-left: 0;
+        }
+      }
+
+      .lay2 {
+        position: absolute;
+        margin: 472px 0 0 1470px;
+        animation: lay2 1.5s linear 1 forwards;
+        animation-delay: 3s;
+      }
+
+      .lay3 {
+        position: absolute;
+        margin: 442px 0 0 1470px;
+        animation: lay3 1.5s linear 1 forwards;
+        animation-delay: 3s;
+      }
+
+      @keyframes lay2 {
+        from {
+          margin: 472px 0 0 1470px;
+        }
+        to {
+          margin: 472px 0 0 0;
+        }
+      }
+      @keyframes lay3 {
+        from {
+          margin: 442px 0 0 1470px;
+        }
+        to {
+          margin: 442px 0 0 0;
+        }
+      }
+
+      .stand {
+        width: 1px;
+        height: 473px;
+        background: white;
+        position: absolute;
+      }
+
+      .stand1 {
+        position: absolute;
+        margin-top: -650px;
+        animation: stand1 1.5s linear 1 forwards;
+        animation-delay: 4.5s;
+      }
+
+      .stand2 {
+        position: absolute;
+        margin: 923px 0 0 1005px;
+        animation: stand2 1.5s linear 1 forwards;
+        animation-delay: 1.5s;
+      }
+
+      @keyframes stand1 {
+        from {
+          margin-top: -650px;
+        }
+        to {
+          margin-top: 0;
+        }
+      }
+
+      @keyframes stand2 {
+        from {
+          margin: 923px 0 0 1005px;
+        }
+        to {
+          margin: 0 0 0 1005px;
+        }
+      }
+
+      .border {
+        position: absolute;
+        width: 918px;
+        height: 24px;
+        margin: 31px 0 0 74px;
+        border-radius: 2px;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        animation: border 3s linear 1 forwards;
+      }
+
+      @keyframes border {
+        from {
+          width: 0;
+          border-right: none;
+        }
+        to {
+          width: 918px;
+          border-right: 1px solid white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+
+    </div>
+    <div class="center">
+      <div class="lay1 lay">
+      </div>
+      <div class="lay2 lay">
+      </div>
+      <div class="lay3 lay">
+
+      </div>
+      <div class="stand1 stand">
+      </div>
+      <div class="stand2 stand">
+      </div>
+      <div class="topnav">
+        <div class="border">
+        </div>
+      </div>
+      <div class="bottomnav">
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>圣诞老人</title>
+    <style media="screen">
+      .cherismase {
+        background: url("./image/baidu.png") no-repeat;
+        width: 270px;
+        height: 129px;
+        background-position: left;
+        /*transition-property: background-position;
+        transition-duration: 90s;
+        transition-timing-function: linear;*/
+        animation-name: mymove;
+        animation-duration: 3s;
+        animation-timing-function: steps(63);
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes mymove {
+        from {
+          background-position: left;
+        }
+        to {
+          background-position: right;
+        }
+      }
+
+      /*.mymove {
+        from {left:0px}
+        to {left:17280px}
+      }*/
+      /*.cherismase:hover {
+        background-position: right;
+        /*background-position: -270px;*/
+        /*background-position: -270px;*/
+    </style>
+  </head>
+  <body>
+
+    <div class="cherismase">
+      <!-- <img src="./image/baidu.png" alt="" /> -->
+    </div>
+
+  </body>
+</html>

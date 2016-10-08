@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>图形</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+      .banxin {
+        width: 1099px;
+        height: 2000px;
+        margin: 20px auto;
+      }
+
+      .banxin li .mu {
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        left: 0
+        top: auto;
+        background: rgba(0, 0, 0, 0);;
+      }
+
+      .banxin li:hover .mu {
+        background: rgba(0, 0, 0, 0.8);
+        transition: all 3s linear;
+      }
+
+      .banxin li {
+        width: 210px;
+        height: 210px;
+        border: 1px solid gray;
+        float: left;
+        margin-right: 60px;
+        margin-bottom: 30px;
+        box-shadow: 2px 2px 2px gray;
+        position: relative;
+      }
+
+      li::before {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        /*margin: auto;*/
+      }
+
+      li:nth-child(1)::before,li:nth-child(2)::before,li:nth-child(3)::before,li:nth-child(4)::before {
+        content: "" ;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 70px solid red;
+      }
+
+      li:nth-child(5)::before,li:nth-child(6)::before,li:nth-child(7)::before,li:nth-child(8)::before,li:nth-child(9)::before {
+        content: "" ;
+        display: block;
+        /*width: 1px;*/
+        /*height: 1px;*/
+      }
+
+
+
+      li:nth-child(1)::before {
+        border-radius: 90px;
+      }
+      li:nth-child(2)::before {
+        border-radius: 40px;
+      }
+      li:nth-child(3)::before {
+        border-radius: 90px 0 0 0;
+      }
+      li:nth-child(4)::before {
+        border-radius: 90px 0;
+      }
+      li:nth-child(5)::before {
+        border-top: 90px solid red;
+        border-right: 90px solid blue;
+        border-bottom: 90px solid green;
+        border-left: 90px solid yellow;
+      }
+      li:nth-child(6)::before {
+        border-top: 90px solid red;
+        border-right: 90px solid transparent;
+        border-bottom: 90px solid green;
+        border-left: 90px solid yellow;
+      }
+      li:nth-child(7)::before {
+        border-top: 90px solid red;
+        border-right: 90px solid transparent;
+        border-bottom: 90px solid red;
+        border-left: 90px solid red;
+        border-radius: 90px;
+      }
+      li:nth-child(8)::before {
+        border-top: 90px solid transparent;
+        border-right: 90px solid red;
+        border-bottom: 90px solid transparent;
+        border-left: 90px solid transparent;
+        border-radius: 90px;
+      }
+      li:nth-child(9)::before {
+        border-top: 90px solid red;
+        border-right: 90px solid transparent;
+        border-bottom: 90px solid green;
+        border-left: 90px solid transparent;
+        border-radius: 90px;
+      }
+
+      li:nth-child(10)::before {
+        width: 180px;
+        height: 90px;
+        display: block;
+        content: "";
+        background: red;
+        border-radius: 180px 180px 0 0;
+      }
+      li:nth-child(10)::after {
+        width: 180px;
+        height: 90px;
+        display: block;
+        content: "";
+        background: green;
+        border-radius: 0 0 180px 180px;
+        margin: 105px 0 0 15px;
+      }
+
+
+      li:nth-child(11) {
+        position: relative;
+      }
+      li:nth-child(11)::before {
+        width: 180px;
+        height: 90px;
+        display: block;
+        content: "";
+        background: red;
+        border-radius: 180px 180px 0 0;
+      }
+      li:nth-child(11)::after {
+        width: 180px;
+        height: 90px;
+        display: block;
+        content: "";
+        background: green;
+        border-radius: 0 0 180px 180px;
+        margin: 105px 0 0 15px;
+      }
+      li:nth-child(11) div {
+        width: 21px;
+        height: 20px;
+        border-radius: 50px;
+        position: absolute;
+      }
+      li:nth-child(11) .mu {
+        border-radius: 0;
+      }
+      li:nth-child(11) .taijizuoqiu {
+        background: red;
+        border: 35px solid green;
+        margin: 65px 0 0 15px;
+      }
+      li:nth-child(11) .taijiyouqiu {
+        background: green;
+        border: 35px solid red;
+        margin: 65px 0 0 105px;
+      }
+
+      li:nth-child(12) {
+        position: relative;
+      }
+      li:nth-child(12)::before {
+        content: "";
+        display: block;
+        background: black;
+        border-top: 8px solid white;
+        border-right: 8px solid red;
+        border-bottom: 8px solid white;
+        border-left: 8px solid white;
+        padding-right: 1px;
+        /*position: absolute;
+        top: 70px;
+        left: 12px;*/
+        margin: 70px 0 0 -3px;
+      }
+      li:nth-child(12)::after {
+        content: "";
+        display: block;
+        width: 160px;
+        height: 90px;
+        background: red;
+        border: 1px solid red;
+        border-radius: 8px;
+        /*position: absolute;*/
+        /*top: 60px;
+        left: 28px;*/
+        margin: 60px 0 0 28px;
+      }
+
+      /*li:nth-child(13) {
+        position: relative;
+      }*/
+      li:nth-child(13)::after {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 45px;
+        background: red;
+        border-bottom-right-radius: 60px;
+      }
+      li:nth-child(13)::before {
+        content: "";
+        display: block;
+        /*position: absolute;*/
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-bottom-right-radius: 30px;
+        /*top: 100px;
+        left: 125px;*/
+        margin: 80px 0 0 109px;
+      }
+
+      li:nth-child(14)::after {
+        content: "";
+        display: block;
+        width: 190px;
+        height: 120px;
+        margin-top: 60px;
+        margin-left: 15px;
+        background: red;
+        border-radius: 30px 60px 60px 30px;
+      }
+      li:nth-child(14)::before {
+        content: "";
+        display: block;
+        /*position: absolute;*/
+        width: 90px;
+        height: 40px;
+        background: white;
+        border-top-right-radius: 80px 30px;
+        border-bottom-right-radius: 80px 30px;
+        /*top: 85px;
+        left: 85px;*/
+        margin: 85px;
+      }
+
+      li:nth-child(15) {
+        position: relative;
+      }
+      li:nth-child(15) .d1 {
+        width: 160px;
+        height: 90px;
+        background: red;
+        border: 1px solid red;
+        border-radius: 8px;
+        position: absolute;
+        top: 60px;
+        left: 15px;
+      }
+      li:nth-child(15) .d2 {
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-bottom-right-radius: 20px;
+        position: absolute;
+        left: 178px;
+        top: 65px;
+      }
+      li:nth-child(15) .d3 {
+        width: 20px;
+        height: 50px;
+        background: red;
+        left: 175px;
+        top: 65px;
+        border-bottom-right-radius: 50px 100px;
+        position: absolute;
+      }
+
+      li:nth-child(16)::before {
+        content: "";
+        display: block;
+        width: 180px;
+        height: 90px;
+        border: 1px solid red;
+        margin-top: 40px;
+        border-top-left-radius: 180px 90px;
+        border-top-right-radius: 180px 90px;
+        border-bottom-left-radius: 180px 90px;
+        border-bottom-right-radius: 180px 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banxin">
+      <ul>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="taijizuoqiu"></div><div class="taijiyouqiu"></div><div class="mu">
+
+        </div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="mu"></div></li>
+        <li><div class="d1"></div><div class="d3"></div><div class="d2"></div><div class="mu">
+
+        </div></li>
+        <li><div class="mu">
+
+        </div></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>动画</title>
+    <script src="library.js" charset="utf-8"></script>
+  </head>
+
+  <style media="screen">
+    #ch {
+      width: 270px;
+      height: 129px;
+      background: url("./image/paopao.png") no-repeat;
+      background-position: left;
+    }
+  </style>
+  <body>
+    <script type="text/javascript">
+      function donghua(e,time) {
+        //保存原始样式
+        var originalstyle = e.style.cssText;
+        e = document.getElementById(e);
+        //动画开始时间
+        var start = (new Date()).getTime();
+        var x = 0;
+        animate()
+        function animate {
+          var now = (new Date()).getTime();
+          var elapsed = now-start;
+          var fraction = elapsed/time;
+          if (fraction < 1) {
+            x -= fraction * 17280;
+            var sd = x + "px";
+            e.style.background-position = sd;
+            setTimeout(animate,Math.min(31.25,time-elapsed));
+          }
+        }
+      }
+      donghua("ch",2000);
+
+    </script>
+    <div id = "ch">
+
+    </div>
+  </body>
+</html>

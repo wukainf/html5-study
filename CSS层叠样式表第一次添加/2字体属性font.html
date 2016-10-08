@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>字体属性font设置</title>
+    <style media="screen">
+
+      i {
+        /*字体大小，单位为px：像素，或em：默认字体大小的倍数*/
+        font-size: 16px;
+        /*字体，浏览器会逐个去匹配，直到找到能适配的字体*/
+        font-family: "这种字体不存在","黑体","宋体";
+        /*字体粗细，由细到粗为：lighter,normal,bold,bolder，也能设置100～900之间100的整数倍，值越大字越粗*/
+        font-weight: bold;
+        /*字体风格：normal：正常，italic或oblique:倾斜，*/
+        font-style: italic;
+        字体颜色，可以用rgb(red,green,blue)方式表示颜色：rgb(0~255,0~255,0~255);也可以用rgba方式：
+        rgba(0~255,0~255,0~255,0~1(透明度)),也可以用16进制三原色表示#FFFFFF;
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+      p {
+        /*综合设置:顺序为font-style font-weight font-size font-family;*/
+        font: normal 900 2em "宋体";
+        color: #23456e;
+        /*字间距*/
+        letter-spacing: 10px;
+        word-spacing: 50px;
+      }
+
+      em {
+        background: yellow;
+        display: inline-block;
+        width: 200px;
+        height: 20px;
+        font: normal 600 20px "黑体";
+        /*单词间距，其实是空格距离*/
+        word-spacing: 20px;
+        /*行高，以后会深入*/
+        line-height: 20px;
+        /*文本装饰，overline：上划线，underline：下划线，linethrough：删除线，none：默认的什么都没有*/
+        text-decoration: overline;
+        /*垂直对齐，sub：下标位置 ，super：上标位置，middle：中线，baseline：基线*/
+        vertical-align: super;
+        /*首行缩进,可以为负值，表示字体向左移，当负值足够大时会超出屏幕(这常用在增加网页权重上)*/
+        text-indent: 20px;
+      }
+
+      .a {
+        /*空白字符处理： normal:默认忽略空白字符 pre，pre-wrap：处理空白字符及换行符 pre-line合并空白符*/
+        white-space: pre;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <i>css层叠样式表</i>
+    <p>
+      css层叠 样式表
+    </p>
+    <i>css层叠样式表</i>
+    <em>hello wo rld</em>
+    <div class="a">
+      阿卡丽水电费加阿里快速的附近拉快速的房价阿里山打飞机爱老鼠的附近阿里时空点发力上阿里快递费
+      啊方式快递了发生来都快饭撒老大费卡死了都快饭撒旅客的发亮开始的附近拉快速的伐啦是看的发力开
+      始的发                 发力开始的房价按数量开店附近路口姐卡卡老就生快乐的发来
+    </div>
+
+  </body>
+</html>

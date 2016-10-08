@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>浮动及其清除</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /*.bigbox {
+        position: relative;
+      }*/
+
+      .box {
+        width: 100px;
+        height: 100px;
+        float: left;
+      }
+
+      .box:first-child {
+        background: red;
+      }
+
+      .box:nth-child(2) {
+        background: blue;
+      }
+
+      .box:nth-child(3) {
+        background: green;
+      }
+
+      .bigbox:nth-child(2) {
+        width: 350px;
+        height: 200px;
+        background: orange;
+      }
+
+      /*p {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50px;
+        background: purple;
+      }*/
+
+      /*清除浮动:浮动往往会影响到标准流的布局,在这里有清除浮动常用的四种方法*/
+
+      /*1.额外标签法:添加clear属性为both元素
+          clear属性:none 允许浮动,left 左边不允许有浮动,right 右边不允许有浮动,both 不允许浮动.*/
+      /*.extra {
+        clear: both;
+      }*/
+
+
+      /*2.overflow:为浮动元素父盒子设置overflow:hidden属性*/
+      /*.bigbox {
+        overflow: hidden;
+      }*/
+
+
+      /*3.after伪类:利用after伪类去除浮动*/
+      /*.clearfix::after {
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+      }
+
+      .clearfix {
+        zoom:1;
+      }*/
+
+      /*4.after before伪类:利用before和after伪类去除浮动*/
+      /*.clearfix:before,.clearfix:after {
+        content: "";
+        display: table;
+      }
+
+      .clearfix:after {
+        clear: both;
+      }
+
+      .clearfix {
+        zoom: 1;
+      }*/
+
+    </style>
+  </head>
+  <body>
+
+    <div class="bigbox clearfix">
+      <div class="box">
+
+      </div>
+      <div class="box">
+
+      </div>
+      <div class="box">
+
+      </div>
+
+      <!-- <p>
+      </p> -->
+      <div class="extra">
+
+      </div>
+    </div>
+
+    <div class="bigbox">
+
+    </div>
+
+  </body>
+</html>

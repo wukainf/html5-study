@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伪类选择器</title>
+  </head>
+  <style media="screen">
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    li {
+      width: 100px;
+      height: 20px;
+    }
+
+    /*ul中第一个li标签*/
+    ul li:first-child {
+      background: aqua;
+    }
+
+    /*ul中第二个li标签*/
+    ul li:nth-child(2) {
+      background: orange;
+    }
+
+    /*ul中除了第二个以外所有li标签*/
+    ul li:not(:nth-child(2)) {
+      color: red;
+    }
+
+    /*ul中最后一个li标签*/
+    ul li:last-child {
+      background: black;
+    }
+
+    /*获得焦点时*/
+    input:focus {
+      background: black;
+      color: white;
+      border: none;
+    }
+
+    /*标签内容为空时*/
+    a:empty {
+      display: block;
+      width: 100px;
+      height: 20px;
+      background: orange;
+    }
+
+    /*锚点*/
+    #li4:target {
+      background: yellow;
+      text-decoration: none;
+    }
+    /*伪元素*/
+    /*p中第一个字符*/
+    p::first-letter {
+      font-size: 24px;
+      color: red;
+    }
+
+    /*p中第一行*/
+    p::first-line {
+      color: blue;
+    }
+
+    /*p在开头添加*/
+    p::before {
+      content: "费考试等级";
+      display: block;
+      width: 300px;
+      height: 20px;
+      line-height: 20px;
+      margin-left: 280px;
+      background: orange;
+    }
+
+    /*p末尾添加*/
+    p::after {
+      content: url("./1.jpg");
+    }
+
+
+
+  </style>
+  <body>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li id="li4">4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+
+
+    <a href="#li4">hello</a>
+    <a href="#"></a>
+    <p style="white-space:pre-wrap">    会计师的看风景阿克苏等缴费卡手机对方看见时看风景
+      法考试等级发力开始肌肤打开里手机发啦快圣诞节发力
+      卡就是地方垃圾是对方克拉三季度发啦快手机对方拉斯
+      阿卡发的手机阿里斯顿加法是快递费加拉斯打飞机爱死
+      卡手机豆腐辣时间的饭卡刷多久伐啦是看的附近伤口的
+    </p>
+
+    <input type="button" name="name" value="点击">
+
+  </body>
+</html>

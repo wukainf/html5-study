@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>波浪</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bigbox {
+        width: 100%;
+        height: 480px;
+        background: #0ea9b1;
+        position: relative;
+      }
+
+      .bottom {
+        width: 100%;
+        height: 100px;
+        background: #0070a4;
+      }
+
+      .bo1 {
+        width: 100%;
+        height: 211px;
+        background: url("./image/1.png");
+        position: absolute;
+        bottom: 0;
+        animation: bo1;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+
+      .bo2 {
+        width: 100%;
+        height: 235px;
+        background: url("./image/2.png");
+        position: absolute;
+        bottom: -20px;
+        animation: bo2;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+
+      .sun {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 50px;
+        left: 50px;
+      }
+
+      .sun1 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        background: yellow;
+        border-radius: 25px;
+        animation: sun2;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+
+      .sun2 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        background: green;
+        border-radius: 25px;
+        animation: sun1;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+
+      .sun3 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        background: white;
+        border-radius: 25px;
+      }
+
+      @keyframes bo1 {
+        from {
+          transform: translateY(-50px);
+        }
+        to {
+          transform: translateY(20px);
+        }
+      }
+      @keyframes bo2 {
+        from {
+          transform: translateY(50px);
+        }
+        to {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes sun1 {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1.5);
+        }
+      }
+      @keyframes sun2 {
+        0% {
+          transform: scale(1);
+        }
+        10% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bigbox">
+      <div class="bo1">
+      </div>
+      <div class="bo2">
+      </div>
+      <div class="sun1">
+      </div>
+      <div class="sun2">
+      </div>
+      <div class="sun3">
+
+      </div>
+    </div>
+    <div class="bottom">
+
+    </div>
+  </body>
+</html>

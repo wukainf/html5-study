@@ -1,0 +1,7 @@
+/*导入样式，用@import导入目标css样式*/
+@import "4.2.css";
+div {
+  width: 200px;
+  height: 200px;
+  background: blue;
+}

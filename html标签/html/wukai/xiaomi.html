@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小米</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+      }
+
+      .banxin {
+        width: 1226px;
+        margin: 0 auto;
+      }
+
+      .fudong {
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      ul,dl {
+        list-style: none;
+      }
+
+      .head1 {
+        background: #333333;
+        height: 40px;
+        font-size: 11px;
+      }
+
+      .head ul li,.shuxian {
+        float: left;
+        margin-top: 9.5px;
+      }
+
+      .head ul a:hover {
+        color: white;
+      }
+
+      .shuxian {
+        width: 1px;
+        height: 11px;
+        background: #b0b0b0;
+        margin: 14.5px 7px;
+      }
+
+      .head ul a {
+        color: #b0b0b0;
+      }
+
+      .head .gouwuche {
+        width: 120px;
+        float: right;
+        cursor: pointer;
+      }
+
+      /*.head .gouwuche:hover {
+        background: white;
+      }*/
+
+      .head .gouwuche img {
+        float: left;
+      }
+
+      .head .gouwuche p {
+        float: left;
+        padding-right: 21px;
+        line-height: 40px;
+        background: #424242;
+        color: #b0b0b0;
+      }
+
+      .log a {
+        width: 44px;
+        color: #b0b0b0;
+        float: right;
+        margin-top: 11.5px;
+      }
+
+      .log a:hover {
+        color: white;
+      }
+
+      .log1 {
+        text-indent: 20px;
+      }
+
+      .shuxian2 {
+        float: right;
+        width: 1px;
+        height: 11px;
+        background: #3c423c;
+        margin: 14px 6px;
+      }
+
+
+/*---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------*/
+      .level1 {
+        text-align: center;
+        height: 56px;
+        padding: 22px 0;
+      }
+
+      .level1 img {
+        float: left;
+      }
+
+      .level1 ul {
+        height: 56px;
+        margin-left: 189px;
+        float: left;
+      }
+
+      .level1 ul li {
+        height: 56px;
+        float: left;
+      }
+
+      .level1 ul a {
+        font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+        color: black;
+        margin-right: 20px;
+        line-height: 56px;
+      }
+
+
+      .level1 ul a:hover {
+        color: orange;
+      }
+
+      .level1 .box {
+        height: 50px;
+        float: right;
+      }
+
+      .level1 .b1 {
+        float: right;
+        width: 243px;
+        height: 48px;
+        margin: 3px 0;
+        border: 1px solid #e0e0e0;
+        margin-right: -1px;
+        text-indent: 10px;
+        background: url("./mi/b1.png") no-repeat;
+        outline-style: none;
+      }
+
+      .level1 .b2 {
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin: 3px 0;
+        cursor: pointer;
+        border: 1px solid #e0e0e0;
+        background: url("./mi/b2.png") no-repeat;
+        outline-style: none;
+      }
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+      .level2 {
+        height: 460px;
+        background: url("./mi/mi-image/1.jpg")
+      }
+
+      .level2 ul {
+        padding: 20px 0;
+        background: #5c534b;
+        width: 234px;
+        /*float: left;*/
+      }
+
+      .level2 ul li {
+        height: 42px;
+        padding: 0 30px;
+        line-height: 42px;
+      }
+
+      .level2 ul li a {
+        color: white;
+        font-size: 12px;
+        float: left;
+      }
+
+      .level2 ul li span {
+        color: #aeaaa6;
+        font-size: 12px;
+        float: right;
+      }
+
+      .level2 ul li:hover {
+        background: #ff6700;
+      }
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+      .level3 {
+        height: 170px;
+        padding-bottom: 14px;
+      }
+
+      .level3 .left1 {
+        position: relative;
+        width: 216px;
+        height: 152px;
+        padding: 9px;
+        margin-top: 14px;
+        background: #5f5750;
+        float: left;
+      }
+
+      .level3 li {
+        width: 70px;
+        height: 75px;
+        float: left;
+      }
+
+      .level3 .l1,.l2,.l4,.l5 {
+        border-right: 1px solid #665e57;
+      }
+
+      .level3 .l1,.l2,.l3 {
+        border-bottom : 1px solid #665e57;
+      }
+
+      .level3 li a {
+        float: left;
+        margin-left: 3px;
+      }
+
+      .level3 li img {
+        float: left;
+      }
+
+      .level3 li a {
+        text-indent: 5px;
+        color: #cfcdcb;
+      }
+
+      .level3 li a:hover{
+        color: white;
+      }
+
+      .level3 .point1,.point2 {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background: #5f5750;
+        position: absolute;
+      }
+
+      .level3 .point1 {
+        left: 73.5px;
+        top: 78px;
+      }
+
+      .level3 .point2 {
+        left: 144px;
+        top: 78px;
+      }
+
+      .level3 .gezhongtu {
+        float: left;
+      }
+
+      .dog {
+        width: 315px;
+        height: 169px;
+        float: left;
+        margin-top: 14px;
+        margin-left: 15px;
+        background-position: -15px -15px;
+      }
+
+      .dog1 {
+        background: url("./1.png") no-repeat;
+        border-top: 1px solid #fb7835;
+        height: 168px;
+      }
+
+      .dog2 {
+        background: url("./2.png") no-repeat;
+      }
+
+      .dog3 {
+        background: url("./3.png") no-repeat;
+      }
+
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+      .level4 {
+        height: 360px;
+      }
+
+      .level4 p {
+        height: 57px;
+        line-height: 57px;
+        font-size: 19px;
+        text-align: left;
+        /*float: left;*/
+      }
+
+
+      .level4  a {
+        color: #666;
+        float: left;
+        margin: 300px 0 0 70px;
+      }
+
+      .level4 span {
+        color: orange;
+        font-size: 18px;
+        margin: -4px 0 0 80px;
+
+        float: left;
+      }
+      .level4 .d1 {
+        width: 234px;
+        height: 339px;
+        float: left;
+        background: url("./5.jpg") -46px 2px;
+        border-top: 1px solid #ffac13;
+      }
+      .level4 .d2{
+        width: 234px;
+        height: 339px;
+        float: left;
+        background: url("./6.jpg") -46px 2px;
+        border-top: 1px solid #83c44e;
+        margin-left: 14px;
+      }
+      .level4 .d3{
+        width: 234px;
+        height: 339px;
+        float: left;
+        background: url("./7.png") -46px 2px;
+        border-top: 1px solid #2196f3;
+        margin-left: 14px;
+      }
+      .level4 .d4{
+        width: 234px;
+        height: 339px;
+        float: left;
+        background: url("./8.png") -46px 2px;
+        border-top: 1px solid #e53935;
+        margin-left: 14px;
+      }
+      .level4 .d5{
+        width: 234px;
+        height: 339px;
+        float: left;
+        background: url("./9.jpg") -46px 2px;
+        border-top: 1px solid #00c0a5;
+        margin-left: 14px;
+      }
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+      .level5 {
+        height: 672px;
+        margin-top: 60px;
+      }
+
+      .level5 p {
+        height: 57px;
+        font-size: 21px;
+        line-height: 57px;
+      }
+
+      .level5 .luyouqi {
+        width: 234px;
+        height: 301px;
+        float: left;
+        background: url("./mi/luyouqi.png") no-repeat 10px 40px;
+      }
+
+      .level5 .luyouqi p {
+        font-size: 12px;
+        height: 40px;
+        text-align: center;
+        margin: 170px 0 0 10px;
+      }
+
+      .level5 .luyouqi span {
+        font-size: 11px;
+        color: #b0b0b0;
+        margin: -20px 0 0 60px;
+      }
+
+      .level5 .luyouqi i {
+        font-style: normal;
+        color: orange;
+        margin-left: 100px;
+      }
+      .level5 img {
+        float: left;
+        margin: 0 0 14px 14px;
+      }
+
+      .level5 .zhi1 {
+        margin: 0;
+      }
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+      .level6 ul {
+        height: 25px;
+        padding: 25px 0;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .level6 li {
+        width: 242px;
+        height: 25px;
+        text-align: center;
+        text-indent: 25px;
+        background: url("./mi/banshou.png") no-repeat 60px;
+        float: left;
+      }
+
+      .level6 .xian {
+        width: 1px;
+        height: 25px;
+        background: #e0e0e0;
+        float: left;
+      }
+
+      .level6 li a {
+        color: #616161;
+      }
+
+      .level6 li a:hover {
+        color: orange;
+      }
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+      .level7 {
+        height: 111px;
+        padding: 42px 0 39px 0;
+      }
+
+      .level7 dl {
+        float: left;
+        margin-right: 104px;
+      }
+
+      .level7 dt {
+        height: 27px;
+        font-size: 12px;
+        color: black;
+        cursor: pointer;
+        line-height: 0;
+      }
+
+      .level7 dd {
+        height: 29px;
+        font-size: 11px;
+        color: #e0e0e0;
+        cursor: pointer;
+      }
+
+      .level7 dd:hover,dt:hover {
+        color: orange;
+      }
+
+      .level7 .youyitiao {
+        width: 1px;
+        height: 112px;
+        background: #e0e0e0;
+        float: left;
+        margin-top: -3px;
+      }
+
+      .level7 .rrrr {
+        float: left;
+      }
+
+      .level7 .rrrr span {
+        color: #ff673a;
+        margin: -8px 70px;
+        font-size: 24px;
+        font-weight: 900;
+      }
+
+      .level7 .rrrr p {
+        font-size: 11px;
+        margin: 2px 80px;
+      }
+
+      .level7 .rrrr .xiaodongxi {
+        font-size: 11px;
+        width: 118px;
+        height: 28px;
+        line-height: 28px;
+        text-indent: 22px;
+        color: #ff673a;
+        border: 1px solid #ff673a;
+        background: url("./mi/hello.png") no-repeat;
+        margin: 5px 80px;
+      }
+
+      .rrrr .xiaodongxi:hover {
+        background: #ff673a;
+        color: white;
+      }
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+      .bottom {
+        height: 136px;
+        padding-top: 30px;
+        background: #fafafa;
+      }
+
+      .xiaomi {
+        width: 56px;
+        height: 57px;
+        background: url("./mi/mi-image/min.png") no-repeat;
+        float: left;
+      }
+
+      .bottom li {
+        float: left;
+      }
+
+      .bottom .zuihouyige {
+        width: 500px;
+      }
+
+      .bottom a {
+        color: #757575;
+        font-size: 11px;
+      }
+
+      .bottom .haiyouxiana {
+        width: 1px;
+        height: 13px;
+        background: #ceb0ce;
+        float: left;
+        margin: 5px 4px 0;
+      }
+
+      .bottom a:hover {
+        color: orange;
+      }
+
+      .bottom p {
+        float: left;
+        color: #b0b0b0;
+        font-size: 11px;
+      }
+
+      .bottom img {
+        float: right;
+      }
+
+      .zuidixia {
+        height: 79px;
+        background: #fafafa;
+        background: url("./mi/bandi.png") no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head1">
+      <div class="head banxin">
+        <ul>
+          <li><a href="#">小米商城</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">MIUI</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">米聊</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">游戏</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">多看阅读</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">云服务</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">金融</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">小米网移动版</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">问题反馈</a></li>
+          <div class="shuxian"></div>
+          <li><a href="#">Select Region</a></li>
+        </ul>
+        <div class="gouwuche">
+          <img src="./mi/gouwuche.png" alt="" />
+          <p>
+            购物车(0)
+          </p>
+        </div>
+        <div class="log2 log">
+          <a href="#">注册</a>
+        </div>
+        <div class="shuxian2">
+        </div>
+        <div class="log1 log">
+          <a href="#">登陆</a>
+        </div>
+      </div>
+    </div>
+    <div class="level1 banxin">
+      <img src="./mi/mi-image/min.png" alt="" />
+      <ul>
+        <li><a href="#">小米手机</a></li>
+        <li><a href="#">红米</a></li>
+        <li><a href="#">平板·笔记本</a></li>
+        <li><a href="#">电视</a></li>
+        <li><a href="#">盒子·影音</a></li>
+        <li><a href="#">路由器</a></li>
+        <li><a href="#">智能硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+      <div class="box">
+        <input class="b2" type="button" name="name" value="">
+        <input class="b1" type="text" name="name" value="">
+      </div>
+    </div>
+    <div class="level2 banxin">
+      <ul>
+        <li><a href="#">手机&nbsp;电话卡</a><span>&gt;</span></li>
+        <li><a href="#">笔记本&nbsp;平板</a><span>&gt;</span></li>
+        <li><a href="#">电视&nbsp;盒子</a><span>&gt;</span></li>
+        <li><a href="#">路由器&nbsp;智能硬件</a><span>&gt;</span></li>
+        <li><a href="#">移动电源&nbsp;电池&nbsp;插线板</a><span>&gt;</span></li>
+        <li><a href="#">耳机&nbsp;音箱</a><span>&gt;</span></li>
+        <li><a href="#">保护套&nbsp;贴膜</a><span>&gt;</span></li>
+        <li><a href="#">线材&nbsp;支架&nbsp;存储卡</a><span>&gt;</span></li>
+        <li><a href="#">箱包&nbsp;服饰</a><span>&gt;</span></li>
+        <li><a href="#">米兔&nbsp;生活周边</a><span>&gt;</span></li>
+      </ul>
+    </div>
+    <div class="level3 banxin">
+      <div class="left1">
+        <ul>
+          <li class="l1"><img src="./mi/t.png" alt="" /><a href="#">选购手机</a></li>
+          <li class="l2"><img src="./mi/t.png" alt="" /><a href="#">选购手机</a></li>
+          <li class="l3"><img src="./mi/t.png" alt="" /><a href="#">选购手机</a></li>
+          <li class="l4"><img src="./mi/t.png" alt="" /><a href="#">选购手机</a></li>
+          <li class="l5"><img src="./mi/t.png" alt="" /><a href="#">选购手机</a></li>
+          <li class="l6"><img src="./mi/t.png" alt="" /><a href="#">选购手机</a></li>
+        </ul>
+        <div class="point1">
+        </div>
+        <div class="point2">
+        </div>
+      </div>
+      <div class="dog1 dog"></div>
+      <div class="dog2 dog"></div>
+      <div class="dog3 dog"></div>
+    </div>
+    <div class="level4 banxin">
+      <p>小米明星单品</p>
+      <div class="d1"><a href="#">买手机送话费</a><span>1720元</span></div>
+      <div class="d2"></div>
+      <div class="d3"></div>
+      <div class="d4"></div>
+      <div class="d5"></div>
+    </div>
+    <div class="level5 banxin">
+      <p>智能硬件</p>
+      <img class="zhi1" src="./mi/zhi1.png" alt="" />
+      <div class="luyouqi">
+        <p>
+          小米路由器
+        </p>
+        <span>四天线设计，更安全更稳定</span>
+        <br/>
+        <i>149元</i>
+      </div>
+      <!-- 第一个是完整设计，其余操作相同。 -->
+      <!-- <img src="./mi/zhi2.png" alt="" /> -->
+      <img src="./mi/zhi2.png" alt="" />
+      <img src="./mi/zhi2.png" alt="" />
+      <img src="./mi/zhi2.png" alt="" />
+      <img src="./mi/zhi2.png" alt="" />
+      <img src="./mi/zhi2.png" alt="" />
+      <img src="./mi/zhi2.png" alt="" />
+      <img src="./mi/zhi2.png" alt="" />
+    </div>
+    <div class="level6 banxin">
+      <ul>
+        <li><a href="#">一小时快修服务</a></li>
+        <div class="xian"></div>
+        <li><a href="#">一小时快修服务</a></li>
+        <div class="xian"></div>
+        <li><a href="#">一小时快修服务</a></li>
+        <div class="xian"></div>
+        <li><a href="#">一小时快修服务</a></li>
+        <div class="xian"></div>
+        <li><a href="#">一小时快修服务</a></li>
+      </ul>
+    </div>
+    <div class="level7 banxin">
+      <dl class="">
+        <dt>帮助中心</dt>
+        <dd>购物指南</dd>
+        <dd>订单操作</dd>
+        <dd>账户管理</dd>
+      </dl>
+      <dl class="">
+        <dt>帮助中心</dt>
+        <dd>购物指南</dd>
+        <dd>订单操作</dd>
+        <dd>账户管理</dd>
+      </dl>
+      <dl class="">
+        <dt>帮助中心</dt>
+        <dd>购物指南</dd>
+        <dd>订单操作</dd>
+        <dd>账户管理</dd>
+      </dl>
+      <dl class="">
+        <dt>帮助中心</dt>
+        <dd>购物指南</dd>
+        <dd>订单操作</dd>
+        <dd>账户管理</dd>
+      </dl>
+      <dl class="">
+        <dt>帮助中心</dt>
+        <dd>购物指南</dd>
+        <dd>订单操作</dd>
+        <dd>账户管理</dd>
+      </dl>
+      <dl class="">
+        <dt>帮助中心</dt>
+        <dd>购物指南</dd>
+        <dd>订单操作</dd>
+        <dd>账户管理</dd>
+      </dl>
+      <div class="youyitiao">
+      </div>
+      <div class="rrrr">
+        <span>400-100-5678</span>
+        <p>
+          周一至周日&nbsp;8:00-18:00<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(仅收市话费)
+        </p>
+        <div class="xiaodongxi">
+          24小时在线客服
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="bottom1 banxin">
+        <div class="xiaomi">
+        </div>
+      </div>
+      <ul>
+        <li><a href="#">小米商城</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">MIUI</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">米聊</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">多看书城</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">小米路由器</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">视频电话</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">小米后院</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">小米天猫店</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">小米淘宝直营店</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">小米网盟</a></li>
+        <div class="haiyouxiana"></div>
+        <li><a href="#">问题反馈</a></li>
+        <div class="haiyouxiana"></div>
+        <li class="zuihouyige"><a href="#">Select&nbsp;Region</a></li>
+      </ul>
+      <p>
+        ©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号<br/>
+        违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+      </p>
+      <img src="./mi/haotu.png" alt="" />
+    </div>
+    <div class="zuidixia">
+    </div>
+  </body>

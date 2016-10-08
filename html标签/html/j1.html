@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function test() {
+        var a = 10;
+        test = "b";
+        test2 = "a";
+      }
+      // test2 = "a";
+      // test();
+
+      // test.toString();
+      var ob = null;
+      var oc = "0";
+      // ob.toString();
+
+      // console.log(typeof(String(test)));
+      console.log(typeof(test.toString()))
+      console.log(typeof(test));
+      console.log(ob);
+      console.log(Boolean(oc));
+      console.log(Number(Boolean(oc)));
+      // console.log(test2);
+      console.log((2/0)==(Number.MAX_VALUE));
+      console.log(typeof(NaN));
+      console.log(Boolean(-10));
+      console.log(Number("00123"));
+      console.log(Number("12hello"));
+      console.log(typeof(parseFloat("123kasjdf")));
+      console.log(parseInt("0111",4));
+      console.log(parseFloat("10.0"));
+    </script>
+  </body>
+</html>

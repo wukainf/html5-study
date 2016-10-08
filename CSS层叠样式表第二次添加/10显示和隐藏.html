@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>显示和隐藏</title>
+  </head>
+  <style media="screen">
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background: aqua;
+      /*给元素添加visibility: hidden属性让其不显示,但占据空间*/
+      /*visibility: hidden;*/
+      /*给元素添加display: none属性让其消失,不占据页面空间*/
+      /*display: none;*/
+      /*将其变为行内块级元素*/
+      /*display: inline-block;*/
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background: orange;
+      /*display: inline-block;*/
+    }
+
+    .box3 {
+      width: 100px;
+      height: 100px;
+      background: green;
+      /*overflow:hidden使超出盒子的内联元素裁剪,裁剪部分不占页面空间*/
+      /*position: relative;*/
+      overflow: hidden;
+    }
+
+    .sbox3 {
+      width: 200px;
+      height: 200px;
+      background: purple;
+      /*position: absolute;*/
+    }
+
+    .box4 {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+
+    tr:nth-child(1) {
+      /*给表格第一行添加属性使其不显示,但依然占据空间*/
+      visibility: collapse;
+    }
+  </style>
+  <body>
+
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+
+    </div>
+
+    <div class="box3">
+      <div class="sbox3">
+
+      </div>
+    </div>
+
+    <div class="box4">
+
+    </div>
+
+    <table border="1px" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          1
+        </td>
+      </tr>
+      <tr>
+        <td style="visibility:hidden">
+          2
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 500px;
+        height: 400px;
+        border: 1px solid gray;
+        position: relative;
+      }
+
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background: orange;
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box">
+      <div class="">
+        200
+      </div>
+      <div class="">
+        400
+      </div>
+      <div class="box1">
+      </div>
+    </div>
+    <script type="text/javascript">
+      var box = document.getElementById("box");
+      var boxs = box.getElementsByTagName("div");
+      boxs[0].onclick = function () {
+        boxs[2].innerHTML = "hello";
+        if (boxs[2].offsetLeft < 200) {
+          setTimeout(function() {
+            clearInterval(set1);
+          },(200 - boxs[2].offsetLeft) / 10 * 1000);
+          var set1 = setInterval(function() {
+            boxs[2].style.left = boxs[2].offsetLeft + 10 + "px";
+          },30);
+        }
+        setInterval(function(){
+          box[2].style.left = box[2].offsetLeft - 10;
+        },30);
+      };
+    </script>
+  </body>
+</html>

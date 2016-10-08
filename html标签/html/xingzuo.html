@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>星座</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .bigbox {
+        width: 500px;
+        height: 250px;
+        margin: 50px auto;
+        border: 1px solid gray;
+        position: relative;
+      }
+
+      h3 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-indent: 20px;
+        color: green;
+        font-size: 13px;
+      }
+
+      .clearfix::before,
+      .clearfix::after {
+        height: 0;
+        clear: both;
+        content: "";
+        display: block;
+        visibility: hidden;
+      }
+
+      .clearfix {
+        zoom:1;
+      }
+
+      .flag {
+        width: 50px;
+        height: 50px;
+        background: url("./xingzuo/Icon.png") no-repeat;
+        float: left;
+        margin: 10px;
+      }
+
+      .select {
+        width: 400px;
+        height: 20px;
+      }
+
+      select {
+        width: 150px;
+        height: 20px;
+        line-height: 20px;
+        background: white;
+        outline-style: none;
+        float: left;
+      }
+
+      .yunshidi {
+        width: 200px;
+        height: 20px;
+        float: left;
+        background: url("./xingzuo/yunshi.png") no-repeat;
+        background-position: 80px 6px;
+        margin: 5px;
+      }
+
+      .yunshimian {
+        width: 200px;
+        height: 20px;
+        background: url("./xingzuo/yunshi.png") no-repeat;
+        background-position: 80px -21px;
+        float: left;
+      }
+
+      ul li {
+        width: 480px;
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        padding: 0 10px;
+        display: none;
+        color: pink;
+      }
+
+      .show {
+        display: block;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="bigbox">
+      <h3>星座运势</h3>
+      <div class="flag clearfix" id="flag">
+      </div>
+      <div class="select">
+      <select class="clearfix" id="select" name="">
+        <option value="1" selected>处女座</option>
+        <option value="2">天蝎座</option>
+        <option value="3">水瓶座</option>
+        <option value="4">摩羯座</option>
+        <option value="5">射手座</option>
+        <option value="6">金牛座</option>
+        <option value="7">巨蟹座</option>
+        <option value="8">双子座</option>
+        <option value="9">双鱼座</option>
+        <option value="10">天秤座</option>
+        <option value="11">白羊座</option>
+        <option value="12">狮子座</option>
+      </select>
+      </div>
+      <div class="yunshidi">
+        <div class="yunshimian" id="yunshi">
+          今日运势：
+        </div>
+      </div>
+      <ul id="ul">
+        <li>处女座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>天蝎座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>水瓶座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>摩羯座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>射手座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>金牛座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>巨蟹座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>双子座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>双鱼座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>天秤座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>白羊座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+        <li>狮子座：阿克苏到房价拉低几分了卡上放款即可附近阿里水库店解放路阿喀琉斯打发是看来萨克的浪费</li>
+      </ul>
+      <script type="text/javascript">
+        function xingzuo(flag,select,yunshi) {
+          var flag = document.getElementById(flag);
+          var select = document.getElementById(select);
+          var yunshi = document.getElementById(yunshi);
+          var xingzuo = select.getElementsByTagName("option");
+          var ul = document.getElementById("ul");
+          var exp = ul.getElementsByTagName("li");
+          exp[0].className = "show";
+          var score = [3,4,8,6,4,8,8,2,9,1,3,5];
+          yunshi.style.width = score[0] * 8 + 80 + "px"
+          select.onchange = function() {
+            var index = select.value;
+            for (i = 0;i < exp.length;i++) {
+              exp[i].className = "";
+            }
+            exp[index-1].className = "show";
+            flag.style.backgroundPosition = "0" + (index-1) * -50 + "px";
+            yunshi.style.width = score[index - 1] * 8 + 80 + "px"
+          }
+        };
+        xingzuo("flag","select","yunshi");
+      </script>
+    </div>
+
+  </body>
+</html>

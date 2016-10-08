@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3盒子</title>
+  </head>
+  <style media="screen">
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: red;
+      padding: 20px;
+      border: 20px solid gray;
+      box-sizing: border-box;
+    }
+
+
+    .box:nth-child(2) {
+      margin-top: 20px;
+      box-sizing: content-box;
+      padding: 20px;
+    }
+
+    .box:nth-child(3) {
+      margin-top: 20px;
+      padding: 20px;
+      /*将图片缩放,多余空间平铺*/
+      /*background-size: contain;*/
+      /*将图片缩放直到一边铺满,多余部分裁剪*/
+      background-size: cover;
+      background-image: url("./1.jpg");
+      /*背景图片位置起始部分,从外边框开始*/
+      /*background-origin: border-box;*/
+      /*从内padding开始*/
+      /*background-origin: content-box;*/
+      /*从外padding开始*/
+      /*background-origin: padding-box;*/
+      /*裁剪到外边框*/
+      /*background-clip: border-box;*/
+      /*裁剪到外padding*/
+      /*background-clip: content-box;*/
+      /*裁剪到内padding*/
+      /*background-clip: padding-box;*/
+    }
+
+
+
+
+
+  </style>
+  <body>
+
+    <div class="box">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+  </body>
+</html>

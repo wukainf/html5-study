@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 440px;
+        height: 500px;
+        position: relative;
+        margin: 50px auto;
+        background: orange;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        width: 100px;
+        height: 50px;
+        float: left;
+        padding-right: 10px;
+        line-height: 50px;
+        text-align: center;
+      }
+      p {
+        width: 440px;
+        height: 450px;
+        position: absolute;
+        background: orange;
+        top: 50px;
+        display: none;
+      }
+      .top {
+        background: green;
+      }
+      .bottom {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul>
+        <li>国内</li>
+        <li>国外</li>
+        <li>国上</li>
+        <li>国下</li>
+      </ul>
+      <p>
+        发快速的附近拉升的附近阿里快速的房价阿斯科利打飞机爱老鼠的疯狂就按时打开房间啊开始飞机拉快递费加阿里时空点缴费
+        啊考试阶段分拉快速的房价阿里上的飞机阿克苏到分解阿里科室等缴费卡收到甲方
+      </p>
+      <p>
+        卡就是的伐啦是叫法怄气ｉｄ发阿卡丽水电费加阿里快速的房价阿里时代开放
+      </p>
+      <p>
+        法考试等级伐啦是咖啡卡老鼠大家发啦快圣诞节发了少肯定房价奥斯卡的附近阿里快速的房价啊；ｓｄｋｆｊａｋｓｄｆｊ
+      </p>
+      <p>
+        kfasdflaksdjflaksdjfkljqiowejfiasjdflkasj
+      </p>
+      <script type="text/javascript">
+        var p = document.getElementsByTagName("p");
+        var li = document.getElementsByTagName("li");
+        for (var i = 0;i < li.length;i++) {
+          li[i].myindex = i;
+          li[i].onmouseover = function() {
+            for (j = 0;j < li.length;j++) {
+              li[j].className = "";
+              p[j].className = "";
+            }
+            this.className = "top";
+            p[this.myindex].className = "bottom";
+          };
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background: url("./3.png");
+        background-size: 200px 200px;
+        position: relative;
+      }
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background: rgba(0,0,0,0.3);
+        position: absolute;
+      }
+
+      .box3 {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        margin: 200px auto;
+      }
+
+      .box4 {
+        width: 600px;
+        height: 600px;
+        background: url("./3.png");
+        background-size: 600px 600px;
+        position: absolute;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box1" id="box1">
+        <div class="box2" id="box2">
+
+        </div>
+    </div>
+    <div class="box3" id="box3">
+        <div class="box4" id="box4">
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+      var box1 = document.getElementById("box1");
+      var box2 = document.getElementById("box2");
+      var box3 = document.getElementById("box3");
+      var box4 = document.getElementById("box4");
+      box1.onmousemove = function(event) {
+        pageX = event.pageX;
+        pageY = event.pageY;
+        if (event.pageX < 50) {
+          pageX = 50;
+        } else if (event.pageX > 150) {
+          pageX = 150;
+        }
+        if (event.pageY < 50) {
+          pageY = 50;
+        } else if (event.pageY > 150) {
+          pageY = 150;
+        }
+
+        box3.style.display = "block";
+        box2.style.left = pageX - box2.offsetWidth / 2 + "px";
+        box2.style.top = pageY - box2.offsetHeight / 2 + "px";
+
+        box4.style.left = -3 * (pageX - box2.offsetWidth / 2) + "px";
+        box4.style.top = -3 * (pageY - box2.offsetHeight / 2) + "px";
+      };
+    </script>
+  </body>
+</html>

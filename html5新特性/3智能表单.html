@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>智能表单2</title>
+    <style media="screen">
+
+      input {
+        margin: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <form class="" action="index.html" method="get">
+      <br>
+      <!-- 选取日期,xxxx/xx/xx 为格式 -->
+      <input type="date" name="name" value="">
+      <br>
+      <!-- 选取月份,xxxx年xx月 为格式 -->
+      <input type="month" name="name" value="">
+      <br>
+      <!-- 选取周,xxxx年第xx周 为格式 -->
+      <input type="week" name="name" value="">
+      <br>
+      <!-- 选取时间,下午/上午xx:xx 为格式 -->
+      <input type="time" name="name" value="">
+      <br>
+      <!-- 选取具体时间,xxxx/xx/xx 下午/上午xx:xx 为格式 -->
+      <!-- autofocus属性:自动获得焦点 -->
+      <input type="datetime-local" name="name" value="" autofocus>
+      <br>
+      <!-- 用来覆盖action属性,适用于type="image"和type="submit" -->
+      <input type="submit" name="name" value="提交" formaction="">
+      <br>
+      <!-- autocomplete:off 关闭自动补全 -->
+      <input type="email" name="name" value="" autocomplete="off">
+      <br>
+
+      <!-- list和datalist一起使用设置了input的默认选单 -->
+      <!-- placeholder属性值是文本预期值提示 -->
+      <!-- disabled="true"时此选单禁用 -->
+      <input name="name" list="list1" placeholder="请输入关键词" disabled="true">
+      <datalist id="list1">
+        <option value="v1">option1</option>
+        <option value="v2">option2</option>
+      </datalist>
+
+      <!-- multiple一次可传输多个文件 -->
+      <!-- required表示此项为必填项 -->
+      <input type="file" accept="audio/x-waw"  required multiple/>
+
+    </form>
+
+  </body>
+</html>

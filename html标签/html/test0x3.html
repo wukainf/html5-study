@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .vox {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vox" id=box>
+
+    </div>
+    <script type="text/javascript">
+      var box = document.getElementById("box");
+      function move(e) {
+        e.style.background = "green";
+      }
+
+      box.addEventListener("click",move(box),false);
+    </script>
+  </body>
+</html>

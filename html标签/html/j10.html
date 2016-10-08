@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    ul {
+      list-style: none;
+      position: absolute;
+      right: 0;
+    }
+
+    ul li {
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: gray;
+      float: right;
+      box-sizing: border-box;
+      margin-right: -1px;
+      margin-top: 1px;
+    }
+
+    .smallbox {
+      width: 100%;
+      height: 500px;
+      border-top: 1px solid #c81623;
+      float: left;
+      position: absolute;
+      top: 30px;
+    }
+
+    span {
+      width: 1px;
+      height: 12px;
+      background: gray;
+      position: absolute;
+      top: 10px;
+      right: 118px;
+    }
+
+    .border {
+      border-top: 2px solid #c81623;
+      border-left: 1px solid #c81623;
+      border-right: 1px solid #c81623;
+      border-bottom: 1px solid white;
+      color: #c81623;
+    }
+
+    span:nth-child(2) {
+      right: 237px;
+    }
+    span:nth-child(3) {
+      right: 356px;
+    }
+    span:nth-child(4) {
+      right: 475.6px;
+    }
+    span:nth-child(5) {
+      right: 594.107px;
+    }
+  </style>
+  <body>
+    <div class="box" id="box">
+      <div class="smallbox">
+      </div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul>
+        <li>热门</li>
+        <li>国际大牌</li>
+        <li>国妆名品</li>
+        <li>个人护理</li>
+        <li>清洁用品</li>
+        <li>纸品湿巾</li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+    var box = document.getElementById("box");
+    var lis = box.getElementsByTagName("li");
+    var spans = box.getElementsByTagName("span");
+    var ma = spans[0].style.right;
+    console.log(ma);
+    for (k = 0;k < spans.length;k++) {
+      ma += 120;
+      spans[k].style.right = ma;
+    }
+    for (i = 0;i < lis.length;i++) {
+      var index = i;
+
+      lis[i].onmouseover = function() {
+        for (j = 0;j < lis.length;j++) {
+          lis[j].className = "";
+        }
+        this.className = "border";
+      };
+    }
+    </script>
+  </body>
+</html>

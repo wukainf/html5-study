@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+        position: absolute;
+        left: 285px;
+      }
+
+      .box {
+        width: 600px;
+        height: 600px;
+        border-radius: 300px;
+        background: url("./clock/clock.jpg");
+        margin: 50px auto;
+        position: relative;
+      }
+
+      ul li {
+        position: absolute;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box">
+      <ul>
+        <li><img src="./clock/hour.png" alt="" /></li>
+        <li><img src="./clock/minute.png" alt="" /></li>
+        <li><img src="./clock/second.png" alt="" /></li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      setInterval(function() {
+        var image = document.getElementsByTagName("li");
+        var now = new Date();
+        var y = now.getFullYear();
+        var m = now.getMonth();
+        var d = now.getDate();
+        var now1 = new Date(y + "-" + m + "-" + d + " 0:0:0");
+        dur = now - now1;
+        var hour = dur / 60 / 60 / 1000;
+        var minute = - (Math.floor(hour) * 60 * 60 * 1000 - dur) / 60 / 1000;
+        // console.log(minute);
+        var sec = - ( Math.floor(hour) * 60 * 60 * 1000 - Math.floor(minute) * 60 * 1000 - dur) / 1000;
+
+        // var hour = now.getHours();
+        // var minute = now.getMinutes();
+        // var sec = now.getSeconds();
+        var deg1 = sec / 60 * 360;
+        var deg2 = minute / 60 * 360;
+        // console.log(deg2);
+        var deg3 = Math.abs(hour - 12) / 12 * 360;
+        image[0].style.transform = "rotate(" + deg3 + "deg)";
+        image[1].style.transform = "rotate(" + deg2 + "deg)";
+        image[2].style.transform = "rotate(" + deg1 + "deg)";
+      },1);
+      console.log("aksdfaj      kadsfjksajdf");
+    </script>
+
+  </body>
+</html>

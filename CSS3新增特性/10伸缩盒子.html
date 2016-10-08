@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伸缩盒子</title>
+  </head>
+  <style media="screen">
+
+    .bigbox {
+      width: 500px;
+      height: 100px;
+      /*将盒子变为伸缩盒子,其子元素都变为行内块元素*/
+      display: flex;
+      border: 1px solid gray;
+    }
+
+    .box {
+      min-width: 100px;
+      background: red;
+    }
+
+    .box1 {
+      background: blue;
+      /*分配1份*/
+      flex: 1;
+    }
+
+    .box2 {
+      background: black;
+      /*分配三份*/
+      flex: 3;
+    }
+
+  </style>
+  <body>
+
+    <div class="bigbox">
+      <div class="box">
+
+      </div>
+      <div class="box1">
+
+      </div>
+      <div class="box2">
+
+      </div>
+    </div>
+
+  </body>
+</html>

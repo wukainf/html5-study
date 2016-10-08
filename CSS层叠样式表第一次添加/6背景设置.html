@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>背景设置</title>
+    <style media="screen">
+
+      .box {
+        width: 200px;
+        height: 120px;
+        /*背景图片*/
+        background-image: url("./w.jpg");
+        /*背景图片平铺方式：no-repeat:不平铺 repeat-x：x方向平铺 repeat-y：y方向平铺*/
+        background-repeat: no-repeat;
+        /*背景图片的位置，第一个值表示背景图片向左移动的距离为-500px，即为向右移动500px，第二个值
+        表示向下移动的距离为-400px即为向上移动400px*/
+        background-position: -500px -400px;
+        /*背景图片的固定，fixed：相对于body固定， scroll：默认相对于所有者固定*/
+        background-attachment: fixed;
+      }
+
+      .box1 {
+        /*box父盒子box1左边距设为100px，证明fixed是相对于body固定的*/
+        margin-left: 100px;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 120px;
+        /*综合设置*/
+        background: url("./w.jpg") no-repeat -500px -500px  fixed;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box1">
+      <div class="box">
+
+      </div>
+    </div>
+
+    <div class="box2">
+
+    </div>
+
+  </body>
+</html>

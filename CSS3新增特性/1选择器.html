@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>选择器</title>
+  </head>
+  <style media="screen">
+
+    .sbox,.ssbox {
+      color: black;
+    }
+
+    /*子元素选择器,只能设置到子类元素,而无法设置到孙类元素*/
+    .box > .sbox {
+      color: aqua;
+    }
+
+    /*相邻兄弟选择器,紧贴的两个兄弟元素,选择后者*/
+    .box + .box2 {
+      width: 100px;
+      height: 100px;
+      background: green;
+    }
+
+    /*通用兄弟选择器,两个兄弟元素(不用紧贴着),选择后者*/
+    .box ~ .box3 {
+      width: 200px;
+      height: 200px;
+      background: orange;
+    }
+
+  </style>
+  <body>
+
+    <div class="box">
+      <div class="sbox">
+        子盒子
+        <div class="ssbox">
+          孙盒子
+        </div>
+      </div>
+    </div>
+
+    <div class="box2">
+
+    </div>
+
+    <div class="box3">
+
+    </div>
+    <a href="#"></a>
+    <a href="http://www.baidu.com"></a>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>导  航</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+        width: 420px;
+        height: 50px;
+        margin: 100px auto;
+      }
+
+      ul li {
+        width: 100px;
+        height: 30px;
+        float: left;
+        margin-left: 1px;
+        text-align: center;
+        /*border-left: 1px solid gray;
+        border-right: 1px solid gray;*/
+        transition: all 2s linear;
+        transform-style: preserve-3d;
+      }
+
+      ul li div {
+        height: 30px;
+      }
+
+      .l1 {
+        background: yellow;
+      }
+
+      .l2 {
+        background: orange;
+        transform-origin: top;
+        transform: rotateX(-90deg);
+      }
+
+      ul li:hover {
+        transform-origin: 50px 15px -15px;
+        transform: rotateX(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><div class="l1">导航１</div><div class="l2">导航２</div></li>
+      <li><div class="l1">导航１</div><div class="l2">导航２</div></li>
+      <li><div class="l1">导航１</div><div class="l2">导航２</div></li>
+      <li><div class="l1">导航１</div><div class="l2">导航２</div></li>
+    </ul>
+  </body>
+</html>

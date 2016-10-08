@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小微博</title>
+  </head>
+  <style media="screen">
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 500px;
+      min-height: 300px;
+      border: 1px solid green;
+      margin: 50px auto;
+      padding: 10px;
+    }
+
+    .box p {
+      display: inline-block;
+      margin-top: -4px;
+    }
+
+    textarea {
+      width: 400px;
+      height: 260px;
+    }
+
+    .sbox {
+      width: 500px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      /*border: 1px solid gray;*/
+      border-bottom: 1px dashed green;
+    }
+
+    i {
+      font-style: normal;
+      display: inline-block;
+      float: left;
+      max-width: 480px;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    a {
+      color: red;
+      float: right;
+      width: 50px;
+      height: 40px;
+      line-height: 40px;
+      text-decoration: none;
+    }
+
+    .hello {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="box" id="box">
+      <p>
+        微博：
+      </p>
+      <textarea id="tex" name="name" rows="8" cols="40"></textarea>
+      <input id="in" type="submit" name="name" value="提交">
+      <div class="sbox hello" id="sbox">
+        <i></i>
+        <a href="#">删除</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    var box = document.getElementById("box");
+    var subm = document.getElementById("in");
+    var texta = document.getElementById("tex");
+    var sbox = document.getElementById("sbox");
+    //getElementsByTagName返回的是NodeList对象，只拥有数组的length属性和下标取值，所以将其转化为数组处理
+    var cx = [];
+    var ax = [];
+    //   １号接口
+    function click1() {
+      var copys = sbox.cloneNode(true);
+      copys.style.display = "block";
+      var i1 = copys.getElementsByTagName("i");
+      var a1 = copys.getElementsByTagName("a");
+      var itex = i1[0];
+      var cont = texta.value;
+      texta.value = "";
+      itex.innerHTML = cont;
+      box.insertBefore(copys,box.children[3]);
+      cx.push(copys);
+      ax.push(a1[0]);
+      //测试表明ax,cx在１号内始终没有删除元素
+      // console.log(ax);
+
+      //当移除节点时,cx和ax计数确定，移除box中的节点，但cx和ax并未发生任何改变；当要执行再次添加评论时
+      //程序转到１号接口执行，继续cx和ax的元素添加
+      for (k = 0;k < cx.length;k++) {
+        ax[k].index2 = k;
+        ax[k].onclick = function() {
+          box.removeChild(cx[this.index2]);
+          //注意删除ax在cx之后，否则不能调用index2用户属性，下面两行起到优化作用，只删除值但长度不变
+          delete cx[this.index2];
+          delete this;
+        };
+      }
+    };
+    subm.addEventListener("click",click1,false);
+    </script>
+  </body>
+</html>

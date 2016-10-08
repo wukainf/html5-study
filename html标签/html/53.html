@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>图片</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .show {
+        width: 126px;
+        height: 86px;
+        margin: 100px 500px;
+        overflow: hidden;
+        /*position: relative;*/
+      }
+
+      .pic {
+        width: 1764px;
+        height: 86px;
+        /*margin-left: -1666px;*/
+        /*position: absolute;*/
+        animation-name: a1;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+
+      .pic img {
+        float: left;
+      }
+
+      @keyframes a1 {
+        0% {
+          /*left: 0;*/
+          margin-left: 0;
+        }
+        100% {
+          /*left: -1792px;*/
+          /*transform: translateX(-1792px);*/
+          margin-left: -1666px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="show">
+      <div class="pic">
+        <img src="./image/1.jpg" alt="" />
+        <img src="./image/2.jpg" alt="" />
+        <img src="./image/3.jpg" alt="" />
+        <img src="./image/4.jpg" alt="" />
+        <img src="./image/5.jpg" alt="" />
+        <img src="./image/6.jpg" alt="" />
+        <img src="./image/7.jpg" alt="" />
+        <img src="./image/1.jpg" alt="" />
+        <img src="./image/2.jpg" alt="" />
+        <img src="./image/3.jpg" alt="" />
+        <img src="./image/4.jpg" alt="" />
+        <img src="./image/5.jpg" alt="" />
+        <img src="./image/6.jpg" alt="" />
+        <img src="./image/7.jpg" alt="" />
+      </div>
+    </div>
+
+  </body>
+</html>

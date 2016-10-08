@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Super() {
+        this.name = "wk";
+        this.color = ["a","b","c"];
+      }
+
+      function Sub() {
+        Super.call(this,"name","color");
+      }
+
+      // Sub.prototype = new Super();
+      var sub1 = new Sub();
+      console.log(sub1);
+      sub1.name = "wukai";
+      // sub1.color = ["a","b","c","1"];
+      sub1.color.push("1");
+      console.log(sub1);
+      var sub2 = new Sub();
+      console.log(sub2);
+      // var sub2 = new Sub();
+      // console.log(sub2);
+
+    </script>
+  </body>
+</html>

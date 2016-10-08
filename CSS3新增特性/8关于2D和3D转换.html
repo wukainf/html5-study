@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2D与3D的转换</title>
+    <style media="screen">
+
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background: aqua;
+        /*2D变换:先放大两倍,再向左并向下移动100px距离,再向左拉抻10度,最后顺时针旋转30度,
+        注意:顺序不一致将可能导致结果不一致*/
+        transform: scale(2) translate(100px,100px) skewX(10deg) rotate(30deg) ;
+      }
+
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background: orange;
+        transform: translate3d(100px,100px,100px) scale3d(0.5,0.5,0.5) rotateX(40deg) rotateY(40deg) rotateZ(40deg);
+      }
+
+      body {
+        transform-style: preserve-3d;
+        perspective: 500px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box1">
+
+    </div>
+
+    <div class="box2">
+
+    </div>
+
+  </body>
+</html>

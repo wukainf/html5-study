@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>３６０</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        background: #16bb9d;
+      }
+
+      .bigbox {
+        width: 1200px;
+        height: 400px;
+        margin: 200px auto;
+      }
+
+      .left {
+        width: 529px;
+        height: 400px;
+        float: left;
+      }
+
+      .search {
+        width: 529px;
+        height: 66px;
+        background: url("./image/360/search.png");
+        float: left;
+        animation: search 1s linear 1 forwards;
+      }
+
+      @keyframes search {
+        from {
+          margin-left: -900px;
+        }
+        to {
+          margin-left: 0;
+        }
+      }
+
+      .word {
+        width: 0;
+        height: 22px;
+        background: url("./image/360/key.png");
+        margin: 22px;
+        animation: word 1s linear 1 forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes word {
+        from {
+          width: 0;
+        }
+        to {
+          width: 99px;
+        }
+      }
+
+      .output {
+        width: 529px;
+        height: 372px;
+        background: url("./image/360/result.png") no-repeat;
+        float: left;
+        margin-top: -13px;
+        background-position: 0 372px;
+        animation: outpu 1s linear 1 forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes outpu {
+        from {
+          background-position: 0 -372px;
+        }
+        to {
+          background-position: 0 0;
+        }
+      }
+
+      .right {
+        width: 612px;
+        height: 299px;
+        background: url("./image/360/info_4.png") no-repeat;
+        float: right;
+        margin-top: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bigbox">
+      <div class="left">
+        <div class="search">
+          <div class="word">
+
+          </div>
+        </div>
+        <div class="output">
+
+        </div>
+      </div>
+      <div class="right">
+
+      </div>
+    </div>
+  </body>
+</html>

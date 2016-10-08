@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>测试before与after层级</title>
+    <style media="screen">
+
+
+
+      p::before {
+        content: "before";
+        display: block;
+        width: 110px;
+        height: 110px;
+        background: red;
+        position: absolute;
+        left: 50px;
+      }
+
+      p::after {
+        content: "after";
+        display: block;
+        width: 90px;
+        height: 90px;
+        background: purple;
+        position: absolute;
+        /*top: 0;*/
+      }
+
+      p {
+        width: 130px;
+        height: 130px;
+        background: aqua;
+        position: relative;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <p>
+      本体
+    </p>
+
+  </body>
+</html>

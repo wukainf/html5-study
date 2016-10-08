@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>选择器</title>
+    <!-- 以style为边界的内容是元素的样式集合 -->
+    <style>
+
+      /*以标签名表示元素，直接写标签名就能引用*/
+      /*width:"";设置元素的宽，height:"";设置元素的高，background-color:"";设置元素的背景颜色*/
+      p {
+        width: 200px;
+        height: 100px;
+        background-color: purple;
+      }
+
+      /*以点加类名的形式表示元素，类名为各个标签class=""引号中的值，此种方式为类名选择器*/
+      /*class值不唯一可以重复*/
+      .cls {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+      }
+
+      /*以#加id名的形式表示元素，id名为各个标签id=""引号中的值，此种方式为id选择器*/
+      #id {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+
+
+      /*通过*设置的元素的样式是从未用上述三种选择器进行过相同设置的任何元素的样式，(其本质是优先级在在选择其中最低)*/
+      /*color为字体颜色，对比可知，由于背景颜色在其他三种选择器已经设置所以不会影响，但字体颜色从未设置，所以都变成了白色*/
+      * {
+        width: 300px;
+        height: 300px;
+        background-color: black;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <p>
+      标签选择器
+    </p>
+
+    <div class="cls">
+      类选择器
+    </div>
+
+    <div id="id">
+      id选择器
+    </div>
+
+    <div>
+      通配符选择器
+    </div>
+
+  </body>
+</html>

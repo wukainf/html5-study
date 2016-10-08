@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 300px;
+      height: 100px;
+      position: relative;
+      margin: 50px auto;
+      overflow: hidden;
+    }
+
+    .image {
+      width: 1200px;
+      height: 100px;
+      position: absolute;
+      /*left: -200px;*/
+      left: 0;
+    }
+
+    ul {
+      width: 100px;
+      height: 10px;
+      list-style: none;
+      position: absolute;
+      bottom: 10px;
+      right: 5px;
+    }
+
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background: black;
+      float: left;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    img {
+      float: left;
+      width: 300px;
+      height: 100px;
+    }
+
+  </style>
+  <body>
+    <div class="box" id="box">
+      <div class="image" id="image">
+      <img src="./mi/1.jpg" alt="" />
+      <img src="./mi/2.jpg" alt="" />
+      <img src="./mi/3.jpg" alt="" />
+      <img src="./mi/4.jpg" alt="" />
+      </div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      var image = document.getElementById("image");
+      var lis = box.getElementsByTagName("li");
+      function move(e,index) {
+        var old = image.offsetLeft;
+        var nowin = -old / 300;
+        var distanse = (index - nowin) * 300;
+        var speed = distanse > 0 ? -10 : 10;
+        var set = setInterval(function() {
+          e.style.left = e.offsetLeft + speed + "px";
+          if (Math.abs(e.offsetLeft - old + distanse) < 10) {
+            clearInterval(set);
+            e.style.left = old - distanse;
+          }
+        },30);
+      };
+
+      // var myindex = 0;
+      var set2 = setInterval(function(){
+        image.style.left = image.offsetLeft - 10 + "px";
+        // myindex++;
+        if (image.offsetLeft == -900) {
+          // myindex = 0;
+          image.style.left = 0;
+        }
+      },30);
+
+        box.onmouseover = function() {
+          clearInterval(set2);
+        };
+        box.onmouseout = function() {
+          set2 = setInterval(function(){
+            if (image.offsetLeft <= -900) {
+              // myindex = 0;
+              image.style.left = 0;
+            }
+            image.style.left = image.offsetLeft - 10 + "px";
+            // myindex++;
+          },30);
+        };
+
+      // box.onmouseout = function() {
+      //   setInterval(set2);
+      // };
+
+      lis[0].onclick = function() {
+        if (image.offsetLeft == 0) {
+          return;
+        }
+        move(image,0)
+      };
+      lis[1].onclick = function() {
+        if (image.offsetLeft == -300) {
+          return;
+        }
+        move(image,1)
+      };
+      lis[2].onclick = function() {
+        if (image.offsetLeft == -600) {
+          return;
+        }
+        move(image,2)
+      };
+      lis[3].onclick = function() {
+        if (image.offsetLeft == -900) {
+          return;
+        }
+        move(image,3)
+      };
+
+    </script>
+  </body>
+</html>

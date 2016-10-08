@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body div {
+        width: 200px;
+        height: 120px;
+        float: left;
+        margin: 50px 20px;
+      }
+      #d1 {
+        background: url("./mi/image/baidu/1.jpg");
+        background-size: 200px 120px;
+      }
+      #d2 {
+        background: url("./mi/image/baidu/2.jpg");
+        background-size: 200px 120px;
+      }
+      #d3 {
+        background: url("./mi/image/baidu/3.jpg");
+        background-size: 200px 120px;
+      }
+      #d4 {
+        background: url("./mi/image/baidu/4.jpg");
+        background-size: 200px 120px;
+      }
+      #d5 {
+        background: url("./mi/image/baidu/5.jpg");
+        background-size: 200px 120px;
+      }
+      body {
+        background: url("./mi/image/baidu/1.jpg") no-repeat left top;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">
+    </div>
+    <div id="d2">
+    </div>
+    <div id="d3">
+    </div>
+    <div id="d4">
+    </div>
+    <div id="d5">
+    </div>
+    <script type="text/javascript">
+      d1 = document.getElementById("d1");
+      d2 = document.getElementById("d2");
+      d3 = document.getElementById("d3");
+      d4 = document.getElementById("d4");
+      d5 = document.getElementById("d5");
+
+      d2.onclick = function() {
+        document.body.style.backgroundImage = "url(./mi/image/baidu/2.jpg)";
+      }
+      d1.onclick = function() {
+        document.body.style.backgroundImage = "url(./mi/image/baidu/1.jpg)";
+      }
+      d3.onclick = function() {
+        document.body.style.backgroundImage = "url(./mi/image/baidu/3.jpg)";
+      }
+      d4.onclick = function() {
+        document.body.style.backgroundImage = "url(./mi/image/baidu/4.jpg)";
+      }
+      d5.onclick = function() {
+        document.body.style.backgroundImage = "url(./mi/image/baidu/5.jpg)";
+      }
+
+    </script>
+  </body>
+</html>
