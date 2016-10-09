@@ -7,4 +7,4 @@
 4. CSS层叠样式表
     - 4.1[CSS层叠样式表一](https://github.com/wukainf/html5-study/tree/master/CSS层叠样式表第一次添加)
     - 4.2[CSS层叠样式表二](https://github.com/wukainf/html5-study/tree/master/CSS层叠样式表第二次添加)
-5. [CSS3](https://github.com/wukainf/html5-study/tree/master/CSS新增特性)
+5. [CSS3](https://github.com/wukainf/html5-study/tree/master/CSS3新增特性)
