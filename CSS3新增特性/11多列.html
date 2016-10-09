@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>多列</title>
+    <style media="screen">
+      div {
+        width: 500px;
+        margin: 50px auto;
+        column-count: 4;
+        column-rule: 1px solid red;
+        background: gray;
+      }
+
+      h3 {
+        text-align: center;
+        column-span: all;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <h3>python源文件</h3>
+      使用Python 源文件在构建脚本的底部，可以定义 compile 目标，Python 源文件内在元素是 compile 运行期间执行的任务，特别的是 py-compile 任务，它负责从 src 目录开始，编译所有的 Python 代码。
+
+该任务会递归遍历所有的子目录，并编译所有的 Python 模块。脚本中没有采用将 src 目录硬编码到调用之处的方式，而是在构建脚本中定义了称为 src.dir 的属性。然后，在需要使用这个目录名的时候。
+
+就可以通过 ${src.dir} 来引用。 要运行构建脚本，可从 Eclipse 中打开它。Eclipse 具有内置的 Ant 构建脚本编辑和浏览功能。Outline 视图可以显示出构建脚本的结构。在 Navigator 视图中。
+
+选择该构建脚本，用右键点击，然后选择“Run Ant...”。选择 compile 目标，然后点击“Run”。构建脚本执行过程中的输出信息应该显示在 Console 视图中，表示运行成功。 从对上述 pydoc 目标的解析可看出。
+
+对Python编程技巧大总结
+对于Python设计语言特性进行全解析
+简读灵活性的Python编程语言
+有关Python版本大杂烩
+如何掌握Python异常处理问题
+第 7 行声明了目标名称，并指出它依赖于 init 和 compile 目标。这意味着在运行 pydoc 目标之前，Ant 必须保证 init 和 compile 目标已经运行，如果没有，则首先运行这两个目标。
+
+pydoc 目标所依赖的 init 目标在第 3 至第 5 行定义。 init 目标仅仅创建了一个存放 PyDoc API 文档文件的目录。如前所述，要为所生成文档的保存位置定义一个属性，名为 pydoc.dir。
+
+第 8 行开始是 py-doc 任务。如前所述，您传入生成 pydoc 过程中所使用的 PYTHONPATH 。 destdir 属性告诉 py-doc 任务将生成的 HTML 文档输出到何处。 第 9 至第 11 行定义了在生成文档的过程中应该处理哪些 Python 源文件。文件集是 Ant 脚本中通用的结构。
+
+可用于定义所操作的一组文件。这是一种很强大的特性，它使您能够通过名字模式、布尔逻辑和文件属性来选择所要操作的文件。Ant 文档中有这方面的完整描述。本例中递归选择了“src”目录下的所有文件。
+
+Python 源文件中具有标准的单元测试框架（从 Python 2.3 开始。在 Python 2.2 中这只是可选模块），与 Java jUnit 框架十分类似。测试用例的结构与 jUnit 采用相同的方式。每一个待测试的类和模块通常都具有自己的测试类。测试类中包含测试装置（fixture）。
+
+它们在 setUp 函数中初始化。每一个测试都编写为测试类中的一个独立的测试函数。unittest 框架会在测试函数之间循环往复，先调用 setUp 、再测试函数、然后清除（ tearDown ）测试函数。请参阅清单 4 中的样例。
+    </div>
+
+  </body>
+</html>

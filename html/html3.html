@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>html标签3</title>
+    <style media="screen">
+
+      textarea {
+        width: 300px;
+        height: 100px;
+      }
+
+      /*select {
+        width: 300px;
+        height: 100px;
+      }*/
+
+      fieldset {
+        width: 300px;
+        height: 100px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- 以form标签为边界的内容是页面与web服务器交互的信息集，属性method:有post和get两个值，post表示提交的信息将包含
+    在请求体内传递给服务器处理，get表示将提交的信息以字符串查询的方式添加到url(统一资源定位符)中，get的方法不太安全
+    因为它会将提交的信息显示在url中，而且url是有固定长度限制的，不适合传输大量的信息
+    属性action：值表示提交的信息将由此路径的文件处理。
+    form是一个块级元素 -->
+    <form method="get" action="http://www.cnblogs.com/fish-li/archive/2011/07/17/2108884.html" >
+
+      <!-- input是一个行内块级元素，type属性：控件类型，name属性：控件名称(主要用于表单与web服务器的交互)
+        size属性：宽度 maxlength属性：最多输入字符数  readonly:只读  disabled：禁用 checked：默认
+        选中 -->
+
+      <!-- text文本框，value值为默认text中的文字，但会根据输入删除改变 -->
+      <input type="text" name="text" value="hello" readonly>
+      <br>
+      <!-- passwd密码框，value值为默认密码框中密码，但会根据输入删除改变 -->
+      <input type="passwd" name="password" value="1">
+      <br>
+      <!-- radio单选框,只能选中一个 -->
+      <input type="radio" name="radio1" readonly>
+      <input type="radio" name="radio2">
+      <input type="radio" name="radio3" disabled>
+      <br>
+      <!-- checkbox复选框，可以一次选中多个 -->
+      <input type="checkbox" name="checkbox1" value="on">
+      <input type="checkbox" name="checkbox2" value="" checked>
+      <input type="checkbox" name="checkbox3" value="">
+
+      <br>
+
+      <!-- submit提交按钮 -->
+      <input type="submit" name="submit" value="提交">
+
+      <!-- reset重置按钮，重新输入 -->
+      <input type="reset" name="reset" value="重置">
+
+      <br>
+
+      <!-- 按钮，value为按钮上的文字 -->
+      <input type="button" name="button" value="按钮">
+
+      <br>
+
+      <!-- 背景为图片的提交按钮 -->
+      <input type="image" name="image" src="./1.png">
+
+      <!-- 隐藏的交互信息 -->
+      <input type="hidden" name="hidden">
+
+      <br>
+
+      <!-- 文件域 -->
+      <input type="file" name="file" value="">
+
+      <br>
+
+      <!-- 行内块级元素 -->
+      <textarea  name="text" rows="1" cols="1">
+        这是文本区域，rows代表行数，cols代表列数，但如果设置了宽高，这两个值就不起作用了
+        (上面的style标签中设置了宽高)
+      </textarea>
+
+
+      <br>
+
+      <!-- select是下拉选单标签，行内块级元素，嵌套n个option标签 -->
+      <!-- size属性表示选单界面显示个数，multiple表示可选中多个(按住ctrl点击) -->
+      <select name="select" size="2" multiple>
+        <option>春</option>
+        <option>夏</option>
+        <option>秋</option>
+        <option>冬</option>
+      </select>
+
+      <select name="select">
+        <option>春</option>
+        <option>夏</option>
+        <!-- selected表示此选项默认选中 -->
+        <option selected>秋</option>
+        <option>冬</option>
+      </select>
+
+      <!-- fieldset是划区标签,它是一个块级元素 -->
+      <fieldset>
+        <legend>这是区标题</legend>
+        这是区内的内容
+      </fieldset>
+
+
+
+    </form>
+
+  </body>
+</html>

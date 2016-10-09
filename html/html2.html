@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>html标签2</title>
+  </head>
+  <body>
+
+    <!-- 表格标签table -->
+    <!-- table标签有一系列属性，具体设置如下，border：边框宽度(px是像素值，本质上是一个计量单位)，cellspacing：各td
+    单元格边框与其他边框的间距，cellpadding:td单元格内容与边框的距离，align：水平对齐方式，具体值有"right":对齐
+    于屏幕右端，"left":对齐于屏幕左端，"center":对齐于屏幕正中央,width:表格宽度，height：表格高度 -->
+    <table border="1px" cellspacing="0" cellpadding="0"  width="500px" height="200px">
+      <caption>表名</caption>
+      <!-- tr标签表示一行，内嵌n个td标签 -->
+      <tr>
+        <td>td标签表示单元格</td>
+        <td>td标签表示单元格</td>
+        <td>td标签表示单元格</td>
+      </tr>
+      <tr>
+        <td>td标签表示单元格</td>
+        <td>td标签表示单元格</td>
+        <td>td标签表示单元格</td>
+      </tr>
+      <tr>
+        <td>td标签表示单元格</td>
+        <td>td标签表示单元格</td>
+        <td>td标签表示单元格</td>
+      </tr>
+    </table>
+
+
+    <br>
+
+    <!-- td标签属性colspan="n"：1个单元格合并n个竖排单元格，rowspan="n":1个单元格合并n个横排单元格
+      小技巧，逐行写，逐行查看网页-->
+    <table cellspacing="0" border="1px" width="500px" height="200px"  >
+      <tr>
+        <td colspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td rowspan="2">4</td>
+        <td>5</td>
+        <td rowspan="2" colspan="2">6</td>
+      </tr>
+      <tr>
+        <td>
+          7
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
